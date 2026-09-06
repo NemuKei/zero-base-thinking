@@ -4,7 +4,7 @@ description: >-
   Use when the user explicitly requests zero-base thinking, a blank-sheet reconsideration, or ゼロベースで考えて for a project, skill, business idea, or new concept. Do not infer this request from frustration, an ordinary improvement, a new-build task, or a mention of the skill alone.
 license: MIT
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Zero-Base Thinking
@@ -21,6 +21,14 @@ Existing work enters through a concrete mismatch. A new concept enters through i
 
 Past decisions and documents are evidence of what was decided and why. Their assumptions, goals, and definitions can be wrong or outdated. Check their basis instead of granting them immunity. A recorded design preference is not automatically an external constraint. Reconsidering a design does not remove actual obligations or authorize changes to permissions, data, or live systems.
 
+## Open the dialogue
+
+An open-ended invocation is a request to start the conversation. In the first response, briefly reflect a relevant observation or tentative tension, then ask one concrete question that opens the inquiry. Use [the question guide](references/questions.md) from this first question, including understandable consequences, explanation help, and free response. Do not wait for an additional request to ask questions or replace the opening with a completed analysis and an optional invitation to discuss it.
+
+When no topic is clear, help the user find a starting point with one approachable question; a finished problem statement is not a prerequisite. When context is rich, ask about a meaningful unsettled point rather than repeating an already stated purpose. Having enough information to suggest a solution does not, by itself, turn an open-ended invocation into a request for a report.
+
+If the user explicitly requests a proposal, conclusion, or other deliverable instead of an interview, or asks to see a draft before more questions, honor that format using the available information and mark assumptions. A request to pause also takes precedence. The conversational default does not make an opening question a gate for every request.
+
 ## 1. Locate the mismatch and the intended value
 
 For existing work, find a specific moment: what happened, what the user expected, and what felt off. Separate that observation from an explanation of its cause. Trace plausible connections through presentation, behavior, approach, problem choice, and intended value. The cause may be upstream, but that is a hypothesis to examine.
@@ -31,9 +39,7 @@ For a new concept, start with who might benefit and what change would matter. Th
 
 ## 2. Use questions to reveal and organize thinking
 
-Before asking substantive questions, read [the question guide](references/questions.md). Its rules cover understandable consequences, explanation help, recommendations, adaptation, and question UI limits.
-
-Ask the next question whose answer can change the problem, value, or direction. Questions are prompts for discovery, not a form to complete. A rejection of the options, a mixed answer, hesitation, or a new thought may be the most useful result. Reflect your interpretation provisionally and let the user correct it. Rebuild the question sequence around new information instead of requiring answers to obsolete questions.
+Carry the dialogue forward: briefly reflect what the answer clarified or changed, then choose the next useful question or move to a blank-sheet construction when ready. Do not routinely hand the initiative back with a generic invitation to add more. Questions are prompts for discovery, not a form to complete. A rejection of the options, a mixed answer, hesitation, or a new thought may be the most useful result. Reflect your interpretation provisionally and let the user correct it. Rebuild the question sequence around new information instead of requiring answers to obsolete questions.
 
 Obtain accessible facts yourself using authorized sources. User answers can settle their intentions and priorities; they do not prove market demand, causality, effectiveness, or feasibility. Keep those claims as hypotheses until supported.
 

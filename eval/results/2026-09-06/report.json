@@ -182,5 +182,6 @@
     "agents/openai.yaml": "skills/zero-base-thinking/agents/openai.yaml",
     "eval/cases.json": "eval/cases.json"
   },
-  "layout_note": "Runtime files were subsequently moved into skills/zero-base-thinking without changing their bytes. The original source_sha256 keys are retained as recorded; current_source_locations resolves them in this repository."
+  "layout_note": "Historical v0.1.0 source bytes can be read at source_snapshot_revision. Resolve the original source_sha256 keys through current_source_locations at that revision; these hashes do not describe later runtime versions.",
+  "source_snapshot_revision": "3249ba3e4d2df74623c028b48d4ade1880863a74"
 }

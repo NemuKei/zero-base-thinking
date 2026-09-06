@@ -1,5 +1,7 @@
 # Local behavioral report — 2026-09-06
 
+This is the historical **v0.1.0** report. Later behavior changes are evaluated separately.
+
 Nine final next-response samples met the relevant semantic checks after one question-structure repair. This is a small, manually reviewed synthetic set, not a benchmark score or a claim of general effectiveness.
 
 The primary agent inspected every saved response. Each actor used a fresh context, the supplied scenario, and the skill plus its question guide where applicable. The negative-trigger sample received metadata only. Exact inherited model identity was not independently verified.
@@ -8,7 +10,7 @@ Four no-skill controls were run. The first-question case already questioned the 
 
 The first with-skill question sample left help in a footer. The question guide was adjusted to include help in the choice list when supported. The final skill and reference hashes, control outputs, repair example, and individual judgments are in [report.json](report.json).
 
-The runtime files were later relocated to `skills/zero-base-thinking/` for distribution without changing their bytes. `current_source_locations` in the JSON report resolves the original recorded paths to the current layout; the original hashes remain valid.
+The runtime files were later relocated to `skills/zero-base-thinking/` for distribution without changing their bytes. For hash verification, resolve `current_source_locations` at the JSON report's immutable `source_snapshot_revision`. The recorded hashes describe v0.1.0, not later runtime versions.
 
 | Case | Result | Reviewed behavior | Evidence |
 | --- | --- | --- | --- |

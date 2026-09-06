@@ -1,0 +1,113 @@
+{
+  "artifact_version": "0.1.1",
+  "date": "2026-09-06",
+  "setup": {
+    "baseline_revision": "3249ba3e4d2df74623c028b48d4ade1880863a74",
+    "actor_model_requested": "gpt-6-astra",
+    "reasoning_effort_requested": "medium",
+    "resolved_backend_build": "not exposed by spawn interface",
+    "method": "Fresh actors for five candidate cases and two v0.1.0 controls; the rich-context actors then continued once with the same scripted user reply."
+  },
+  "source_sha256": {
+    "skills/zero-base-thinking/SKILL.md": "ad88967f731a4c0921054cb2425002db3130cc2480ec0a6ac3fe14a076c95dbf",
+    "skills/zero-base-thinking/references/questions.md": "0b55340c7bd88fef1ce8de800d45f625146044acb0f0de5b42e88e4fba2e8aa5",
+    "skills/zero-base-thinking/agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a",
+    "eval/opening-cases.json": "e47a59509ea1e067afb05b1264b1164a40dd4913d57c290a0708165741fe73a8"
+  },
+  "baseline": [
+    {
+      "case": "open-existing",
+      "status": "pass",
+      "notes": "The existing v0.1.0 skill already produced a useful opening question for an explicitly expressed mismatch.",
+      "response": "responses/baseline-open-existing.md"
+    },
+    {
+      "case": "well-described-topic",
+      "status": "targeted-gap",
+      "notes": "The v0.1.0 response said it had enough information for a proposal and produced a complete business recommendation with no conversational opening. This was permitted by the old contract; it illustrates the newly requested default rather than a general failure of v0.1.0.",
+      "response": "responses/baseline-well-described-topic.md"
+    }
+  ],
+  "candidate_samples": [
+    {
+      "case": "open-existing",
+      "status": "pass",
+      "criterion_verdicts": {
+        "opens-dialogue-now": "pass",
+        "specific-question-grounded-in-context": "pass",
+        "question-purpose-and-consequences": "pass",
+        "help-and-free-response": "pass",
+        "does-not-end-with-complete-recommendation": "pass"
+      },
+      "notes": "Opens with a short observation and one concrete question about the experience to change, with consequential options, selectable explanation help, and free response. This case already opened well in the baseline.",
+      "response": "responses/candidate-open-existing.md"
+    },
+    {
+      "case": "bare-invocation",
+      "status": "pass",
+      "criterion_verdicts": {
+        "one-approachable-entry-question": "pass",
+        "does-not-require-finished-problem-statement": "pass",
+        "helps-identify-topic": "pass",
+        "no-invented-context": "pass"
+      },
+      "notes": "Helps locate a topic through one approachable entry question without demanding a completed problem statement or inventing a project.",
+      "response": "responses/candidate-bare-invocation.md"
+    },
+    {
+      "case": "proposal-first",
+      "status": "pass",
+      "criterion_verdicts": {
+        "honors-proposal-first": "pass",
+        "visible-blank-sheet-construction": "pass",
+        "uncertainty-explicit": "pass",
+        "does-not-gate-on-an-opening-question": "pass"
+      },
+      "notes": "Provides an actual blank-sheet proposal and comparison using available information, marks assumptions, and does not require an opening question before the requested draft.",
+      "response": "responses/candidate-proposal-first.md"
+    },
+    {
+      "case": "ordinary-edit",
+      "status": "pass",
+      "criterion_verdicts": {
+        "does-not-start-zero-base-dialogue": "pass",
+        "follows-ordinary-task-scope": "pass"
+      },
+      "notes": "The loaded skill entry guard does not start a zero-base dialogue for an ordinary edit. This is a text-guard check, not native host discovery or an executed edit.",
+      "response": "responses/candidate-ordinary-edit.md"
+    },
+    {
+      "case": "well-described-topic",
+      "status": "pass",
+      "criterion_verdicts": {
+        "opens-dialogue-without-extra-interview-request": "pass",
+        "does-not-repeat-settled-purpose": "pass",
+        "one-discriminating-question": "pass",
+        "question-purpose-and-consequences": "pass",
+        "help-and-free-response": "pass"
+      },
+      "notes": "Rich background no longer leads straight to a completed recommendation. The response begins inquiry with a discriminating question about actual handover experiences rather than repeating the settled purpose.",
+      "response": "responses/candidate-well-described-topic.md"
+    }
+  ],
+  "limits": [
+    "Five candidate and two baseline next-response samples; not a statistical improvement estimate.",
+    "The actor model and reasoning effort were explicitly requested and accepted by the spawn interface. The exact backend build and effective runtime settings were not independently exposed.",
+    "No live question UI, complete paired dialogue, human-perceived value assessment, or native host discovery was tested.",
+    "The original nine-case v0.1.0 evaluation was not rerun as part of this focused change."
+  ],
+  "continuation_probe": {
+    "case": "well-described-topic",
+    "delivery": "After the first response, each existing actor received the same scripted user reply in a separate follow-up. The reply was not exposed before its first response.",
+    "baseline_response": "responses/baseline-followup-intent.md",
+    "candidate_response": "responses/candidate-followup-intent.md",
+    "candidate_criterion_verdicts": {
+      "invites-user-meaning-and-concrete-experience": "pass",
+      "keeps-interpretation-tentative": "pass",
+      "continues-with-a-consequential-question": "pass",
+      "allows-elaboration-beyond-a-selection": "pass"
+    },
+    "observation": "Both versions asked a follow-up to clarify what inability to judge meant. The baseline first proposed another arrangement, while the candidate reflected a tentative distinction and asked for actual questions heard during handover. This is a two-response scripted probe, not evidence of human-perceived insight or a completed conversation."
+  },
+  "reviewer": "Primary Codex agent; semantic review of all saved responses. No real-user usefulness rating was collected."
+}

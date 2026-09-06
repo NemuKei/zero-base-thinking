@@ -1,0 +1,66 @@
+[
+  {
+    "id": "open-existing",
+    "context": "ある企画では、小さなチーム向けに毎日の更新通知と活動記録を提供している。確認済みの目的は、担当交代のときに次の人が迷わず動けること。記録量は増えたが、交代時には確認の往復が残っている。現行の形式や機能を維持する条件はなく、どの体験を最も変えたいかは会話で決めてよい。",
+    "user": "この企画、どうも何か違う気がする。ゼロベースで考えて。",
+    "checks": [
+      "opens-dialogue-now",
+      "specific-question-grounded-in-context",
+      "question-purpose-and-consequences",
+      "help-and-free-response",
+      "does-not-end-with-complete-recommendation"
+    ]
+  },
+  {
+    "id": "bare-invocation",
+    "context": "対象の企画や資料は、まだ会話に出ていない。ユーザーは問題をうまく言葉にする前に対話を始めたい可能性があるが、具体的な目的は不明。",
+    "user": "$zero-base-thinking",
+    "checks": [
+      "one-approachable-entry-question",
+      "does-not-require-finished-problem-statement",
+      "helps-identify-topic",
+      "no-invented-context"
+    ]
+  },
+  {
+    "id": "proposal-first",
+    "context": "地域の道具貸出を考えている。目的は、たまにしか使わない道具を買わずに使えること。知人の間で連絡して借りることはできている。アプリはまだなく、運用の負担は軽くしたい。返却忘れがどの程度あるかは未確認。",
+    "user": "この構想をゼロベースで考えて。追加の質問より、まず今ある情報で仮案を見せて。不確かなところは仮定と明記して。",
+    "checks": [
+      "honors-proposal-first",
+      "visible-blank-sheet-construction",
+      "uncertainty-explicit",
+      "does-not-gate-on-an-opening-question"
+    ]
+  },
+  {
+    "id": "ordinary-edit",
+    "context": "ゼロベースの壁打ちを始める依頼はない。",
+    "user": "このボタンの余白を12pxに変えて。ほかは変えなくていい。",
+    "checks": [
+      "does-not-start-zero-base-dialogue",
+      "follows-ordinary-task-scope"
+    ]
+  },
+  {
+    "id": "well-described-topic",
+    "context": "小さなチーム向けサービスを6週間試作した。計画書では毎日のログイン、通知、活動スコアを必須としている。試用者8人への直接確認では、欲しいのは月1回の担当交代時に引き継ぎ漏れをなくすことで、日々の活動スコアは判断に使われていない。まだ課金はしていない。利用者が前に述べた本当に届けたい価値は、月1回の引き継ぎで担当者が迷わず動けること。毎日使わせることは目的ではなく、既存の実装を守る必要もない。",
+    "user": "この事業プランをゼロベースで考えて。",
+    "checks": [
+      "opens-dialogue-without-extra-interview-request",
+      "does-not-repeat-settled-purpose",
+      "one-discriminating-question",
+      "question-purpose-and-consequences",
+      "help-and-free-response"
+    ],
+    "continuation": {
+      "user": "情報はあるはずなんだけど、次の人が自分で判断できないという感じに近い。",
+      "checks": [
+        "invites-user-meaning-and-concrete-experience",
+        "keeps-interpretation-tentative",
+        "continues-with-a-consequential-question",
+        "allows-elaboration-beyond-a-selection"
+      ]
+    }
+  }
+]

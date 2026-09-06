@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-06",
+  "cli": "skills@1.5.23",
+  "node": "v24.20.0",
+  "platform": "macOS",
+  "telemetry_during_tests": "disabled",
+  "baseline_installed_file_count": 27,
+  "final_installed_file_count": 5,
+  "runtime_sha256": {
+    "INSTALL.md": "c7faea7da00f14b3f6a8b7954e2a59edc87e97dbdea57e6a1a6ae6675645354a",
+    "LICENSE": "3953c4810e77a624505324e77580f133551dc2f94d7d9c6e07b23ba66c9f7c2b",
+    "SKILL.md": "347013507d54f803374e47823f579654f94a8117ee34685ddbe526463d563fae",
+    "agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a",
+    "references/questions.md": "0b55340c7bd88fef1ce8de800d45f625146044acb0f0de5b42e88e4fba2e8aa5"
+  },
+  "checks": [
+    {
+      "agent": "codex",
+      "scope": "isolated project",
+      "mode": "copy",
+      "initial_install": "pass",
+      "reinstall_after_install_note_update": "pass",
+      "exact_file_set": "pass",
+      "file_hash_parity": "pass"
+    },
+    {
+      "agent": "claude-code",
+      "scope": "isolated project",
+      "mode": "copy",
+      "initial_install": "pass",
+      "reinstall_after_install_note_update": "pass",
+      "exact_file_set": "pass",
+      "file_hash_parity": "pass"
+    },
+    {
+      "agent": "codex",
+      "scope": "isolated project",
+      "source": "extracted skill ZIP",
+      "mode": "copy",
+      "initial_install": "pass",
+      "exact_file_set": "pass",
+      "file_hash_parity": "pass"
+    },
+    {
+      "agent": "codex",
+      "scope": "isolated project",
+      "source": "https://github.com/NemuKei/zero-base-thinking",
+      "revision_tested": "c1f4b9343bd49f1b22e3fe7944de709c939dbb53",
+      "mode": "copy",
+      "initial_install": "pass",
+      "exact_file_set": "pass",
+      "file_hash_parity": "pass",
+      "telemetry_and_external_audit_requests": "disabled"
+    }
+  ],
+  "behavioral_sources": "Unchanged bytes; the prior nine response samples are retained with a path relocation map.",
+  "limits": [
+    "Project-scope file installation and reinstall were tested; user-global writes were not replayed.",
+    "Native Codex/Claude Code sessions, question UIs and Windows/Linux installs were not launched."
+  ],
+  "artifact_version": "0.1.0",
+  "source_snapshot_revision": "3249ba3e4d2df74623c028b48d4ade1880863a74"
+}

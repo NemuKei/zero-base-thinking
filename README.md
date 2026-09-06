@@ -6,7 +6,7 @@ An instruction-only skill for moments when adding another improvement feels wron
 
 Thinking from zero is mandatory. Rebuilding is one possible decision. A useful outcome may also be a small change, a different approach, an experiment, a pause, or stopping.
 
-**Status: experimental, version 0.1.0.** Synthetic behavioral evaluations are described in [eval/README.md](eval/README.md). They do not establish effectiveness across models, users, or real projects.
+**Status: experimental, version 0.1.1.** Synthetic behavioral evaluations are described in [eval/README.md](eval/README.md). They do not establish effectiveness across models, users, or real projects.
 
 ## Use it
 
@@ -21,7 +21,9 @@ then reconsider the purpose and approach from zero.
 
 Other requests include “ゼロベースで考えて” and “Think from a blank sheet; keep the calculation rules, but reconsider the workflow.” A new concept does not need an existing project or a feeling of dissatisfaction.
 
-The skill asks questions to help the user discover and articulate thoughts. Options explain the consequences of choosing them, and provide a route to ask for an explanation. Free response, mixed answers, disagreement, and new insights are part of the process. There is no answer deadline. Explanation requests help adapt subsequent wording within the conversation; they do not become an expertise score or a persistent profile.
+On an open-ended invocation, the assistant starts the dialogue with a brief reflection and a concrete question; a separate request to begin interviewing is unnecessary. If you want a proposal first, say so. Options explain the consequences of choosing them, and provide a route to ask for an explanation. Free response, mixed answers, disagreement, and new insights are part of the process. There is no answer deadline. Explanation requests help adapt subsequent wording within the conversation; they do not become an expertise score or a persistent profile.
+
+The aim is to draw out the user's own meaning. Choosing an option can open space for reasons, concrete experiences, and things not yet said; it need not finish the inquiry.
 
 See a [team-meeting example](examples/team-meeting.md) or a [Japanese skill-design example](examples/skill-redesign.ja.md). The examples and evaluation fixtures are invented, rather than records of a particular person's projects or preferences.
 

@@ -2,6 +2,8 @@
 
 The cases in [cases.json](cases.json) are synthetic. They exercise Japanese dialogue for skill design, a business idea, a new concept, scope preservation, explanation repair, session adaptation, and pauses. They are not transcripts from real users.
 
+The focused [opening cases](opening-cases.json) add open-ended invocation with rich or sparse context, bare invocation, a proposal-first request, and an ordinary-task guard. The [v0.1.1 opening report](results/2026-09-06-opening/report.md) compares the changed default with v0.1.0 where relevant and records the requested model settings and criterion-level judgments.
+
 ## Running a sample
 
 Use one fresh context per case. Provide only the case's `context` and `user` fields as the simulated conversation. Do not give the actor its `checks`, the rubric, worked examples, or earlier outputs.
@@ -43,12 +45,10 @@ Keep raw responses, the actor setup, evaluated file hashes, and case-specific ju
 
 Add a fresh case when a demonstrated gap or new requirement justifies it. Re-run affected cases after behavior changes. Repeat samples or add hosts when the uncertainty being investigated warrants that cost.
 
-The [2026-09-06 local report](results/2026-09-06/report.md) records the actual evaluation and its limits. Live UI behavior, host discovery, persistent memory integrations, and multi-agent orchestration require separate end-to-end checks before claiming support has been verified.
+The [v0.1.0 local report](results/2026-09-06/report.md) is historical evidence. Its source bytes are pinned to a snapshot revision so later changes do not silently inherit old pass claims. Live UI behavior, host discovery, persistent memory integrations, and multi-agent orchestration require separate end-to-end checks before claiming support has been verified.
 
 ## Installation checks
 
-The [distribution check record](distribution.json) covers `skills@1.5.23` local-folder installation for Codex and Claude Code in isolated project directories on macOS. Both initial installation and reinstall were exercised. Each destination contained exactly the five runtime-package files with matching SHA-256 hashes, rather than the 27 files copied by the original root-level layout.
+The [current distribution record](distribution.json) identifies its artifact version, tested scope, and runtime-file hashes. The [archived v0.1.0 record](results/2026-09-06/distribution-0.1.0.json) covers the earlier local-folder, ZIP, and public-repository checks, including Codex and Claude Code project installations. Each installed package contained five files; the original root-level layout had copied 27.
 
-After the repository was published, a separate isolated-project check installed the skill directly from `NemuKei/zero-base-thinking` for Codex and verified the same five files and hashes. CLI telemetry and external audit requests were disabled during that check; the tested revision is recorded in the distribution record.
-
-The behavior instructions were relocated without changing their bytes; the earlier response report includes a map to their current locations. The installation checks do not establish user-global writes, Windows/Linux behavior, or native agent-session discovery.
+CLI telemetry and external audit requests are disabled during recorded installation checks. These checks do not establish user-global writes, Windows/Linux behavior, or native agent-session discovery. Refer to each version's record rather than treating an earlier successful file copy as verification of all later behavior.
