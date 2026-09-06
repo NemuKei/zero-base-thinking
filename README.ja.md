@@ -27,23 +27,23 @@ $zero-base-thinking
 
 ## 導入
 
-ファイルを操作できるAIエージェントなら、ダウンロードしたフォルダーを開くかSkillのZIPを渡して、次のように頼めます。
+Skillを導入できるAIエージェントなら、次のように頼めます。
 
 ```text
-このフォルダーまたはZIPにある Zero-Base Thinking を、私が使っている
-AIエージェントのSkillとして導入してください。既存の導入があれば
+https://github.com/NemuKei/zero-base-thinking にある Zero-Base Thinking を、
+私が使っているAIエージェントのSkillとして導入してください。既存の導入があれば
 上書き前に差分を確認し、本体と質問ガイドを読み込めることを確認してください。
 ```
 
-ターミナルを使う場合は、Node.js 22.20以上を用意し、ダウンロードしたソース、またはSkillのZIPを展開したフォルダーで、次の1行を実行します。
+ターミナルを使う場合は、Node.js 22.20以上を用意し、次の1行を実行します。
 
 ```sh
-npx skills add . --skill zero-base-thinking --global
+npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
 選択画面が出たら、使うAIエージェントを選びます。[標準のskills CLI](https://github.com/vercel-labs/skills)が配置先を扱うので、ファイルを個別にコピーする必要はありません。Codexに限定するなら末尾に`--agent codex`、Claude Codeなら`--agent claude-code`を付けます。
 
-一つのプロジェクトだけに導入したい場合は、そのプロジェクトで実行し、`.`をダウンロード先のパスに置き換えて、`--global`を外します。CLIはGitリポジトリのURLからの導入にも対応しています。
+一つのプロジェクトだけに導入したい場合は、そのプロジェクトで実行し、`--global`を外します。ダウンロードしたフォルダーや展開済みZIPから導入する場合は、`NemuKei/zero-base-thinking`をそのフォルダーのパスに置き換えます。その中で実行する場合は`.`を指定できます。
 
 導入対象は[`skills/zero-base-thinking/`](skills/zero-base-thinking/INSTALL.md)の5ファイルです。本体、質問ガイド、設定、ライセンス、短い導入案内を含みます。評価記録や開発者向け資料は、Skillの導入先へ入りません。
 

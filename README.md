@@ -27,21 +27,21 @@ See a [team-meeting example](examples/team-meeting.md) or a [Japanese skill-desi
 
 ## Install
 
-With a coding agent that can access files, open the downloaded source folder or provide the skill ZIP, then ask:
+With a coding agent that can install skills, ask:
 
 ```text
-Install the Zero-Base Thinking skill from this folder or ZIP for my coding
-agent. Review any existing installation before replacing it, then verify
-that the skill and its question guide are available.
+Install Zero-Base Thinking from https://github.com/NemuKei/zero-base-thinking
+for my coding agent. Review any existing installation before replacing it,
+then verify that the skill and its question guide are available.
 ```
 
-Or, with Node.js 22.20 or later, open a terminal in the downloaded source or extracted skill folder and run:
+Or, with Node.js 22.20 or later, run:
 
 ```sh
-npx skills add . --skill zero-base-thinking --global
+npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
-Select your agent if prompted. The [standard skills CLI](https://github.com/vercel-labs/skills) handles the destination and supports local folders as well as Git repository URLs. To target Codex directly, append `--agent codex`; for Claude Code, append `--agent claude-code`. To install only for one project, run the command from that project, replace `.` with the downloaded folder's path, and omit `--global`.
+Select your agent if prompted. The [standard skills CLI](https://github.com/vercel-labs/skills) handles the destination. To target Codex directly, append `--agent codex`; for Claude Code, append `--agent claude-code`. To install only for one project, run the command from that project and omit `--global`. For a downloaded source or extracted skill folder, replace `NemuKei/zero-base-thinking` with that folder's path, or with `.` when running inside it.
 
 The installable package lives in [`skills/zero-base-thinking/`](skills/zero-base-thinking/INSTALL.md). Its five files include all runtime instructions, metadata, the license, and a short installation note. Contributor documentation and synthetic evaluation records stay outside the installed skill. No custom installer or persistent background process is required.
 
