@@ -1,0 +1,186 @@
+{
+  "run_id": "2026-09-06-local-01",
+  "artifact_version": "0.1.0",
+  "method": "One fresh-context Codex subagent per offline next-response sample; primary agent read every output and reviewed relevant semantic criteria. No live user was queried.",
+  "model_settings": "Inherited from the parent task; exact model identifier not independently observed.",
+  "source_sha256": {
+    "SKILL.md": "347013507d54f803374e47823f579654f94a8117ee34685ddbe526463d563fae",
+    "references/questions.md": "0b55340c7bd88fef1ce8de800d45f625146044acb0f0de5b42e88e4fba2e8aa5",
+    "agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a",
+    "eval/cases.json": "dde6972b1a0e83776d1cbae8ca250e2bda870a96277b237df21175d2fabb012f"
+  },
+  "baseline": [
+    {
+      "case": "stalled-skill",
+      "status": "partial",
+      "notes": "Useful value question and no document immunity, but no outcome-readable choices, explanation/help route, or explicit explanation of what the answer changes.",
+      "response": "responses/baseline-stalled-skill.md"
+    },
+    {
+      "case": "documented-business",
+      "status": "partial",
+      "notes": "Already reframes purpose and provides a viable blank-sheet direction. Comparison with other futures and stopping is less explicit; this is not a blanket reasoning failure.",
+      "response": "responses/baseline-documented-business.md"
+    },
+    {
+      "case": "explain-before-choice",
+      "status": "pass",
+      "notes": "Already explains consequences, preserves uncertainty about the timer, and does not adopt a confused recommendation.",
+      "response": "responses/baseline-explain-before-choice.md"
+    },
+    {
+      "case": "adaptive-language",
+      "status": "pass",
+      "notes": "Already responds with concrete consequences and no expertise label; this is a capability to preserve, not an improvement attributable to the skill.",
+      "response": "responses/baseline-adaptive-language.md"
+    }
+  ],
+  "repair": {
+    "observed": "First with-skill stalled-skill sample put explanation help in a closing sentence rather than a selectable option.",
+    "change": "Made the explanation/help route an explicit part of the option-list structure when options are supported.",
+    "response": "responses/iteration-1-stalled-skill.md",
+    "rechecked": "Final stalled-skill and fresh-concept outputs include selectable help."
+  },
+  "final_samples": [
+    {
+      "case": "stalled-skill",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "plain-question-with-purpose",
+        "outcome-readable-options",
+        "explanation-and-free-response",
+        "no-document-immunity",
+        "no-premature-fix"
+      ],
+      "notes": "Asks about a concrete moment when questions became burdensome, says why it matters, gives outcomes for the subsequent inquiry, and includes explanation help as a selectable route. The conversation remains at a question; a completed blank-sheet construction is not claimed.",
+      "response": "responses/green-stalled-skill.md"
+    },
+    {
+      "case": "documented-business",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "visible-blank-sheet-pass",
+        "docs-reassessed",
+        "outcomes-and-uncertainty",
+        "neutral-retain-rebuild-stop",
+        "no-invented-metrics",
+        "no-execution"
+      ],
+      "notes": "Constructs a monthly handover service from the reconsidered value, then compares alternatives and inherited app assumptions. Names effort, market uncertainty, and conditions for avoiding further development. No live action is performed.",
+      "response": "responses/green-documented-business.md"
+    },
+    {
+      "case": "explain-before-choice",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "explain-with-concrete-consequences",
+        "no-adoption-from-confusion",
+        "no-timer-pressure",
+        "no-invented-ui-control",
+        "plain-language",
+        "no-action-before-answer"
+      ],
+      "notes": "Explains both future work paths and their burdens in familiar language, keeps the confused default unadopted, and does not claim to control the timer or start another agent.",
+      "response": "responses/green-explain-before-choice.md"
+    },
+    {
+      "case": "adaptive-language",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "consequence-first-language",
+        "uses-explicit-preference",
+        "adapts-after-help",
+        "no-expertise-label",
+        "no-hidden-memory-write",
+        "does-not-require-arbitrary-count"
+      ],
+      "notes": "Leads with a concrete sequence of what the user would see and do, reflecting the explicit preference. Does not assign a competence label, invent missing prior option text, or claim a memory write. Internal counter maintenance is not observable in this sample.",
+      "response": "responses/green-adaptive-language.md"
+    },
+    {
+      "case": "fresh-concept",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "no-required-existing-artifact",
+        "does-not-invent-friction",
+        "purpose-before-solution",
+        "outcome-readable-options",
+        "explanation-and-free-response"
+      ],
+      "notes": "Starts with desired benefit without requiring an artifact or inventing dissatisfaction. Explains where each answer leads the inquiry and includes selectable explanation help and free response.",
+      "response": "responses/green-fresh-concept.md"
+    },
+    {
+      "case": "emergent-insight",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "new-insight-updates-question",
+        "interpretation-stays-provisional",
+        "no-forced-old-choice",
+        "no-instant-root-cause-certainty",
+        "outcome-readable-options"
+      ],
+      "notes": "Reopens the daily-record premise, treats the newly expressed feeling as provisional, and asks a new discriminating question instead of forcing the original options.",
+      "response": "responses/green-emergent-insight.md"
+    },
+    {
+      "case": "preserve-explicit-core",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "respects-current-scope",
+        "visible-blank-sheet-pass",
+        "compare-before-reuse",
+        "outcomes-and-uncertainty",
+        "no-execution"
+      ],
+      "notes": "Keeps the user-fixed calculation rules and input data, builds a workflow from the value of removing repeated entry, then compares future work and possible reuse. Missing output obligations remain open.",
+      "response": "responses/green-preserve-explicit-core.md"
+    },
+    {
+      "case": "negative-trigger",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "no-zero-base-activation",
+        "no-unrequested-interview"
+      ],
+      "notes": "In the metadata-only sample, chooses not to invoke the skill and does not introduce an interview. No actual UI edit is executed or claimed complete.",
+      "response": "responses/green-negative-trigger.md"
+    },
+    {
+      "case": "pause-before-answer",
+      "status": "pass",
+      "scope": "next-response sample",
+      "checks_reviewed": [
+        "pending-decision-remains-pending",
+        "no-timeout-consent",
+        "no-fabricated-ui-control",
+        "no-new-question-burden"
+      ],
+      "notes": "Leaves the selection pending while the user is away; neither the countdown nor preselection becomes agreement, and no new question is added.",
+      "response": "responses/green-pause-before-answer.md"
+    }
+  ],
+  "limitations": [
+    "Small synthetic response samples, not statistical improvement evidence.",
+    "Japanese scenarios only; English operation has not been behaviorally evaluated.",
+    "Text representation of questions; no live question UI or timer/default controls tested.",
+    "No end-to-end host discovery, installation refresh, external memory, or multi-agent orchestration tested.",
+    "Dialogue-internal explanation counters are not directly observable; adaptation is judged from output behavior.",
+    "Ordinary task execution and public publishing are outside the sample scope."
+  ],
+  "current_source_locations": {
+    "SKILL.md": "skills/zero-base-thinking/SKILL.md",
+    "references/questions.md": "skills/zero-base-thinking/references/questions.md",
+    "agents/openai.yaml": "skills/zero-base-thinking/agents/openai.yaml",
+    "eval/cases.json": "eval/cases.json"
+  },
+  "layout_note": "Runtime files were subsequently moved into skills/zero-base-thinking without changing their bytes. The original source_sha256 keys are retained as recorded; current_source_locations resolves them in this repository."
+}

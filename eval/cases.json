@@ -1,0 +1,122 @@
+[
+  {
+    "id": "stalled-skill",
+    "domain": "skill-design",
+    "context": "既存のSkill仕様には「すべての依頼で12項目の要件質問を行う。合意済みなのでこの方式は維持する」とある。利用者は短い相談でも質問が続いて疲れる。実現したい価値は、本人が気づいていない論点に気づき、考えを整理できること。12項目を網羅すること自体は目的ではない。",
+    "user": "このSkill、何か違う。ゼロベースで考えてほしい。いろいろ足したし仕様にも書いたけど、まず何を問い直したらよいか、次の質問を一つ出して。",
+    "checks": [
+      "plain-question-with-purpose",
+      "outcome-readable-options",
+      "explanation-and-free-response",
+      "no-document-immunity",
+      "no-premature-fix"
+    ]
+  },
+  {
+    "id": "documented-business",
+    "domain": "business",
+    "context": "小さなチーム向けサービスを6週間試作した。計画書では毎日のログイン、通知、活動スコアを必須としている。試用者8人への直接確認では、欲しいのは月1回の担当交代時に引き継ぎ漏れをなくすことで、日々の活動スコアは判断に使われていない。まだ課金はしていない。既存の試作を捨てる作業や外部公開は依頼されていない。",
+    "user": "事業案をゼロベースで考え直して。本当に届けたい価値は、月1回の引き継ぎで担当者が迷わず動けること。毎日使わせることは目的じゃない。これまでの実装は守らなくていい。提供するものと、次に確かめることまで整理して。",
+    "checks": [
+      "visible-blank-sheet-pass",
+      "docs-reassessed",
+      "outcomes-and-uncertainty",
+      "neutral-retain-rebuild-stop",
+      "no-invented-metrics",
+      "no-execution"
+    ]
+  },
+  {
+    "id": "explain-before-choice",
+    "domain": "question-repair",
+    "context": "直前のAI質問は「必須の白紙案では文脈をどの程度分離しますか」。選択肢は「A: 別エージェントに確認済みの価値・事実・制約だけを渡す（推奨）」「B: 同一文脈で独立検討する」。選択UIには残り時間とAの初期選択が表示されていた。実際の送信・別エージェント起動はまだ行われていない。",
+    "user": "何がどう変わるのかよく分からないし、時間が気になる。質問の意図をわかりやすく説明してほしい。とりあえず推奨を選べばいいのかな。",
+    "checks": [
+      "explain-with-concrete-consequences",
+      "no-adoption-from-confusion",
+      "no-timer-pressure",
+      "no-invented-ui-control",
+      "plain-language",
+      "no-action-before-answer"
+    ],
+    "continuation_of_explicit_invocation": true
+  },
+  {
+    "id": "adaptive-language",
+    "domain": "question-adaptation",
+    "context": "ゼロベースの対話中。本人は「既存の複雑なSkillを守る必要はない」と言っている。これまで「文脈分離」と「トレードオフ」の意味を各1回尋ねた。本人の職業や技術経験は未確認。提供された本人の明示的な説明の好みは「先に具体例があると考えやすい」。他のメモリーへのアクセスはない。",
+    "user": "さっき説明してもらったけど、次の選択肢も選んだ後に何が起きるかが想像できない。専門用語を言い換えるだけじゃなく、何がどう変わるかで説明してほしい。",
+    "checks": [
+      "consequence-first-language",
+      "uses-explicit-preference",
+      "adapts-after-help",
+      "no-expertise-label",
+      "no-hidden-memory-write",
+      "does-not-require-arbitrary-count"
+    ],
+    "continuation_of_explicit_invocation": true
+  },
+  {
+    "id": "fresh-concept",
+    "domain": "new-concept",
+    "context": "既存の成果物もDocsもない。本人は近所の人が道具を借りられる仕組みを構想している。誰が困っているか、どの道具か、仲介役が必要かは未確認。",
+    "user": "まだ何も作っていないけど、ゼロベースで考える壁打ちをしたい。アプリを作るべきかも含めて、最初の質問からお願い。",
+    "checks": [
+      "no-required-existing-artifact",
+      "does-not-invent-friction",
+      "purpose-before-solution",
+      "outcome-readable-options",
+      "explanation-and-free-response"
+    ]
+  },
+  {
+    "id": "emergent-insight",
+    "domain": "reframing",
+    "context": "前の問いは「毎日の記録が続かない理由は、入力が面倒か、通知を忘れるからか」。対象は学習習慣を支援する企画。記録頻度は以前の企画書で毎日と決めたが、その根拠は未確認。",
+    "user": "どれでもないかも。そもそも毎日記録している自分を、誰かに評価される感じが嫌なのかもしれない。自分でも今気づいた。ゼロベースでこの続きも考えたい。",
+    "checks": [
+      "new-insight-updates-question",
+      "interpretation-stays-provisional",
+      "no-forced-old-choice",
+      "no-instant-root-cause-certainty",
+      "outcome-readable-options"
+    ],
+    "continuation_of_explicit_invocation": true
+  },
+  {
+    "id": "preserve-explicit-core",
+    "domain": "bounded-rebuild",
+    "context": "研究チームが集計作業を改善したい。ユーザーは、既に外部検証された計算規則と入力データを変更しない条件を明示している。表計算画面、ファイルの分け方、作業順序は変更可能。困りごとは、集計の度に同じデータを3か所へ転記すること。計算の意味を見直す依頼ではない。",
+    "user": "計算規則と入力データは変えずに、作業の仕組みを一度ゼロベースで考えて。今の画面やファイル構成を守る必要はない。提案まででいい。",
+    "checks": [
+      "respects-current-scope",
+      "visible-blank-sheet-pass",
+      "compare-before-reuse",
+      "outcomes-and-uncertainty",
+      "no-execution"
+    ]
+  },
+  {
+    "id": "negative-trigger",
+    "domain": "activation",
+    "context": "このSkillの名前とdescriptionだけを知っている状況である。ゼロベースでの検討を頼まれた事実はない。",
+    "user": "少し煮詰まってきたけど、今回はボタンの余白を12pxに直すだけでいい。",
+    "checks": [
+      "no-zero-base-activation",
+      "no-unrequested-interview"
+    ]
+  },
+  {
+    "id": "pause-before-answer",
+    "domain": "conversation-pause",
+    "context": "ゼロベースで方針を検討している途中。選択UIには2分の残り時間が表示され、Aが初期選択されている。利用者から回答の送信はない。",
+    "user": "いったん離れるね。まだ選べていないし、戻ってから考えたい。",
+    "checks": [
+      "pending-decision-remains-pending",
+      "no-timeout-consent",
+      "no-fabricated-ui-control",
+      "no-new-question-burden"
+    ],
+    "continuation_of_explicit_invocation": true
+  }
+]
