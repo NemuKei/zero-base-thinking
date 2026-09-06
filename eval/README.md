@@ -49,4 +49,6 @@ The [2026-09-06 local report](results/2026-09-06/report.md) records the actual e
 
 The [distribution check record](distribution.json) covers `skills@1.5.23` local-folder installation for Codex and Claude Code in isolated project directories on macOS. Both initial installation and reinstall were exercised. Each destination contained exactly the five runtime-package files with matching SHA-256 hashes, rather than the 27 files copied by the original root-level layout.
 
-The behavior instructions were relocated without changing their bytes; the earlier response report includes a map to their current locations. The installation checks do not establish user-global writes, remote installation, Windows/Linux behavior, or native agent-session discovery.
+After the repository was published, a separate isolated-project check installed the skill directly from `NemuKei/zero-base-thinking` for Codex and verified the same five files and hashes. CLI telemetry and external audit requests were disabled during that check; the tested revision is recorded in the distribution record.
+
+The behavior instructions were relocated without changing their bytes; the earlier response report includes a map to their current locations. The installation checks do not establish user-global writes, Windows/Linux behavior, or native agent-session discovery.

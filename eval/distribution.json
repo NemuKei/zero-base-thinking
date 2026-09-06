@@ -40,12 +40,22 @@
       "initial_install": "pass",
       "exact_file_set": "pass",
       "file_hash_parity": "pass"
+    },
+    {
+      "agent": "codex",
+      "scope": "isolated project",
+      "source": "https://github.com/NemuKei/zero-base-thinking",
+      "revision_tested": "c1f4b9343bd49f1b22e3fe7944de709c939dbb53",
+      "mode": "copy",
+      "initial_install": "pass",
+      "exact_file_set": "pass",
+      "file_hash_parity": "pass",
+      "telemetry_and_external_audit_requests": "disabled"
     }
   ],
   "behavioral_sources": "Unchanged bytes; the prior nine response samples are retained with a path relocation map.",
   "limits": [
     "Project-scope file installation and reinstall were tested; user-global writes were not replayed.",
-    "Native Codex/Claude Code sessions, question UIs and Windows/Linux installs were not launched.",
-    "Remote repository installation was not tested because this source has not been published."
+    "Native Codex/Claude Code sessions, question UIs and Windows/Linux installs were not launched."
   ]
 }
