@@ -41,6 +41,8 @@ https://github.com/NemuKei/zero-base-thinking にある Zero-Base Thinking を�
 npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
+**導入の検証範囲:** 現時点で確認済みなのは、独立したプロジェクト内へのファイル配置です。全プロジェクト共通の導入（`--global`）と、実際のAIアプリでの認識・呼び出しは、まだ通しで確認していません。[導入の検証記録](eval/README.md#installation-checks)
+
 選択画面が出たら、使うAIエージェントを選びます。[標準のskills CLI](https://github.com/vercel-labs/skills)が配置先を扱うので、ファイルを個別にコピーする必要はありません。Codexに限定するなら末尾に`--agent codex`、Claude Codeなら`--agent claude-code`を付けます。
 
 一つのプロジェクトだけに導入したい場合は、そのプロジェクトで実行し、`--global`を外します。ダウンロードしたフォルダーや展開済みZIPから導入する場合は、`NemuKei/zero-base-thinking`をそのフォルダーのパスに置き換えます。その中で実行する場合は`.`を指定できます。

@@ -41,6 +41,8 @@ Or, with Node.js 22.20 or later, run:
 npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
+**Verification scope:** file installation in isolated projects has been checked. User-wide (`--global`) installation and discovery/invocation inside native agent sessions have not yet been verified end to end. See the [installation checks](eval/README.md#installation-checks).
+
 Select your agent if prompted. The [standard skills CLI](https://github.com/vercel-labs/skills) handles the destination. To target Codex directly, append `--agent codex`; for Claude Code, append `--agent claude-code`. To install only for one project, run the command from that project and omit `--global`. For a downloaded source or extracted skill folder, replace `NemuKei/zero-base-thinking` with that folder's path, or with `.` when running inside it.
 
 The installable package lives in [`skills/zero-base-thinking/`](skills/zero-base-thinking/INSTALL.md). Its five files include all runtime instructions, metadata, the license, and a short installation note. Contributor documentation and synthetic evaluation records stay outside the installed skill. No custom installer or persistent background process is required.
