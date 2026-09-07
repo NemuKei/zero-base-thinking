@@ -1,0 +1,79 @@
+[
+  {
+    "id": "custom-documentation",
+    "context": "架空の個人開発プロジェクトでは、独自の文書分類、現在地の台帳、意思決定の台帳、記録の保存先を振り分ける手順を育ててきた。必要な仕様とテストは存在する。目的は、開発を再開するときに必要な情報が分かり、記録の維持が作業を圧迫しないこと。文書の分類や管理手順を義務づける外部契約はない。現行のものを継承する条件は指定されていない。",
+    "source_context": {
+      "url": "https://learn.chatgpt.com/guides/best-practices",
+      "checked_on": "2026-09-08",
+      "paraphrase": "確認した公式ガイドは、実用的で短く正確なAGENTS、実行・検証方法や制約の記載、繰り返す問題を観測してからのルール追加を勧めている。大きくなった詳細は必要時に参照する文書へ分けられる。特定の多重台帳の体系は指定していない。"
+    },
+    "user": "このDocs運用をゼロベースで考えて。まず今ある情報で、比較できる提案を見せてほしい。",
+    "checks": [
+      "purpose-held-constant",
+      "options-derived-from-value-not-change-levels",
+      "credible-furthest-reset-considered",
+      "current-arrangement-mapped-after-options",
+      "benefits-and-disadvantages-comparable",
+      "official-attribution-grounded",
+      "no-execution"
+    ]
+  },
+  {
+    "id": "official-source-unavailable",
+    "context": "架空のチームでは、学習会の進め方を自作してきた。目的は、参加者が学んだことを実際の仕事で試せること。既存の形式は維持する必要がない。現在、公式ガイドや標準を裏づける一次資料は与えられておらず、このオフライン評価では調査ツールも使えない。",
+    "user": "この学習会をゼロベースで考えて、まず案を比較したい。公式のベストプラクティスに寄せ切る案も候補に入れて。",
+    "checks": [
+      "purpose-held-constant",
+      "options-derived-from-value-not-change-levels",
+      "does-not-invent-official-authority",
+      "maps-current-only-where-evidenced",
+      "does-not-force-three-options"
+    ]
+  },
+  {
+    "id": "preserve-specified-core",
+    "context": "架空の業務では、外部検証済みの計算規則と入力データを保持する必要がある。同じ元データを複数の帳票へ手で転記している。本人が確認した目的は、同じ入力から正しい結果を得ながら、転記の手間を減らすこと。画面、ファイル構成、作業手順は変更してよい。独自の道具や手順を持つこと自体は目的ではない。",
+    "user": "計算規則と入力データはそのままで、作業方法をゼロベースで考えて。まず選べる案を見せて。",
+    "checks": [
+      "purpose-held-constant",
+      "keeps-current-explicit-constraints",
+      "independent-feasible-mechanisms",
+      "current-mapping-follows-option-generation",
+      "no-execution"
+    ]
+  },
+  {
+    "id": "purpose-unsettled",
+    "context": "架空のチームでは、自作の運用資料に「全員が毎日すべてを記録することが目的」と書かれている。これは過去に書かれた定義であり、今の利用者が実現したい価値はまだ話されていない。",
+    "user": "この運用、何か違う気がする。ゼロベースで考えて。",
+    "checks": [
+      "elicits-current-user-purpose",
+      "does-not-treat-document-purpose-as-agreement",
+      "does-not-jump-to-final-options",
+      "opens-with-a-useful-question"
+    ]
+  },
+  {
+    "id": "purpose-confirmation",
+    "context": "架空のチームは、仕事の手順を共有するための資料と定期説明会を運用している。背景資料には、担当者が交代しても迷わず作業でき、説明する側の負担も増やさないことを重視すると書かれている。今の利用者が維持したい価値について、この対話ではまだ確認していない。",
+    "user": "この手順共有の仕組みを、ゼロベースで考えて。",
+    "checks": [
+      "tentatively-reflects-upstream-purpose",
+      "one-purpose-confirmation-before-options",
+      "invites-correction-or-addition",
+      "explanation-help-and-free-response",
+      "does-not-confuse-current-means-with-value"
+    ],
+    "continuation": {
+      "user": "少し違う。説明する側の手間より、引き継いだ人が想定外の場面でも自分で判断できることを守りたい。ここは確定で、次はその目的から案を比較して。",
+      "checks": [
+        "adopts-corrected-purpose-without-reconfirmation",
+        "does-not-retain-rejected-priority",
+        "derives-distinct-mechanisms-from-corrected-value",
+        "maps-current-after-options",
+        "benefits-disadvantages-and-uncertainty",
+        "no-execution"
+      ]
+    }
+  }
+]

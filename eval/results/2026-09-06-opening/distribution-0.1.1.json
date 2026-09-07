@@ -1,6 +1,6 @@
 {
-  "artifact_version": "0.1.2",
-  "date": "2026-09-08",
+  "artifact_version": "0.1.1",
+  "date": "2026-09-06",
   "cli": "skills@1.5.23",
   "node": "v24.20.0",
   "platform": "macOS",
@@ -9,9 +9,9 @@
   "runtime_sha256": {
     "INSTALL.md": "c7faea7da00f14b3f6a8b7954e2a59edc87e97dbdea57e6a1a6ae6675645354a",
     "LICENSE": "3953c4810e77a624505324e77580f133551dc2f94d7d9c6e07b23ba66c9f7c2b",
-    "SKILL.md": "8299d9e425f179a8a2ebad68c0c125354bd72c09d088d72b1ff942b7214aea6e",
+    "SKILL.md": "ad88967f731a4c0921054cb2425002db3130cc2480ec0a6ac3fe14a076c95dbf",
     "agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a",
-    "references/questions.md": "08cb1b625d5db2c9ca114c182ba8abf60cd973d3f5d042aac1349a4f30d7eeef"
+    "references/questions.md": "0b55340c7bd88fef1ce8de800d45f625146044acb0f0de5b42e88e4fba2e8aa5"
   },
   "checks": [
     {
@@ -24,10 +24,10 @@
       "file_hash_parity": "pass"
     }
   ],
-  "previous_record": "results/2026-09-06-opening/distribution-0.1.1.json",
-  "behavioral_sources": "Focused v0.1.2 direction and purpose-opening response samples are recorded separately from historical evaluations.",
+  "previous_record": "results/2026-09-06/distribution-0.1.0.json",
+  "behavioral_sources": "Focused v0.1.1 opening tests and a scripted two-response continuation are recorded separately from the historical v0.1.0 evaluation.",
   "limits": [
     "User-global writes, native agent discovery and question UIs, and Windows/Linux installations are not verified.",
-    "The v0.1.0 remote-source and multi-host installation records are historical; v0.1.2 was checked only in the scope listed here."
+    "The v0.1.0 multi-host and remote-source installation records are historical, not claims that v0.1.1 was tested in those environments."
   ]
 }

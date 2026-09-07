@@ -6,7 +6,7 @@ An instruction-only skill for moments when adding another improvement feels wron
 
 Thinking from zero is mandatory. Rebuilding is one possible decision. A useful outcome may also be a small change, a different approach, an experiment, a pause, or stopping.
 
-**Status: experimental, version 0.1.1.** Synthetic behavioral evaluations are described in [eval/README.md](eval/README.md). They do not establish effectiveness across models, users, or real projects.
+**Status: experimental, version 0.1.2.** Synthetic behavioral evaluations are described in [eval/README.md](eval/README.md). They do not establish effectiveness across models, users, or real projects.
 
 ## Use it
 
@@ -21,9 +21,11 @@ then reconsider the purpose and approach from zero.
 
 Other requests include “ゼロベースで考えて” and “Think from a blank sheet; keep the calculation rules, but reconsider the workflow.” A new concept does not need an existing project or a feeling of dissatisfaction.
 
-On an open-ended invocation, the assistant starts the dialogue with a brief reflection and a concrete question; a separate request to begin interviewing is unnecessary. If you want a proposal first, say so. Options explain the consequences of choosing them, and provide a route to ask for an explanation. Free response, mixed answers, disagreement, and new insights are part of the process. There is no answer deadline. Explanation requests help adapt subsequent wording within the conversation; they do not become an expertise score or a persistent profile.
+On an open-ended invocation, the assistant normally starts with one question to check the upstream purpose, intention, and value to preserve. It offers a tentative understanding for you to correct, or asks what outcome matters when that is unknown. A purpose already settled in the current exchange carries forward without repeated confirmation. A separate request to begin interviewing is unnecessary; if you want a proposal first, say so. Options explain the consequences of choosing them, and provide a route to ask for an explanation. Free response, mixed answers, disagreement, and new insights are part of the process. There is no answer deadline. Explanation requests help adapt subsequent wording within the conversation; they do not become an expertise score or a persistent profile.
 
 The aim is to draw out the user's own meaning. Choosing an option can open space for reasons, concrete experiences, and things not yet said; it need not finish the inquiry.
+
+At the proposal stage, the skill holds the established intention and desired value constant, then derives rational options as if starting now. It considers a radical alternative when that could serve the goal, with benefits, disadvantages, and uncertainty. Only afterward does it locate the current arrangement among the options and consider transition work. It does not build a fixed ladder of “keep, modify, replace,” or require exactly three proposals.
 
 See a [team-meeting example](examples/team-meeting.md) or a [Japanese skill-design example](examples/skill-redesign.ja.md). The examples and evaluation fixtures are invented, rather than records of a particular person's projects or preferences.
 
@@ -63,8 +65,8 @@ The format follows the [Agent Skills specification](https://agentskills.io/speci
 
 1. Ground a mismatch or opportunity and reconsider the intended value.
 2. Use understandable questions to reveal missing intentions and assumptions.
-3. Construct an approach without inheriting the current solution as the premise.
-4. Compare imaginable outcomes and future costs, then consider reuse.
+3. Derive independent ways to deliver the established value without inheriting the current solution as the premise.
+4. Compare those options, locate the current arrangement among them, then assess transition work and reuse.
 5. Return the question worth answering, a proposed or chosen direction, and remaining uncertainty or a next verification.
 
 Current user-specified boundaries still matter. Documents can be reassessed as design evidence; that does not erase actual obligations or grant permission to change live systems.

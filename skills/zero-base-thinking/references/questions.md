@@ -16,6 +16,8 @@ For example, replace “isolate context” with “ask another AI that has not s
 
 Keep each option short enough to compare. Add one concrete example when it helps; offer more detail on request rather than putting a specification inside every option.
 
+For an opening purpose check, explain that the answer will guide which means to reconsider. For example: “I understand the value to preserve as being able to resume work accurately with little maintenance. Is that right?” Treat this as a tentative reflection, not a recommendation to agree. A correction, an addition, or uncertainty keeps the purpose open. If there is no basis for that reflection, ask which outcome matters instead; the current method and an old document's stated goal are not substitutes for the user's intention.
+
 ## Understanding and uncertainty are valid responses
 
 Provide an easy route to **“Explain what this question means, with an example.”** Also allow **“I can't decide yet.”** These have different meanings and must not be treated as substantive choices.

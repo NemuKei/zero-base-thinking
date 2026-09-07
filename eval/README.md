@@ -4,9 +4,11 @@ The cases in [cases.json](cases.json) are synthetic. They exercise Japanese dial
 
 The focused [opening cases](opening-cases.json) add open-ended invocation with rich or sparse context, bare invocation, a proposal-first request, and an ordinary-task guard. The [v0.1.1 opening report](results/2026-09-06-opening/report.md) compares the changed default with v0.1.0 where relevant and records the requested model settings and criterion-level judgments.
 
+The [direction and purpose cases](direction-cases.json) cover a purpose-confirmation opening, an unknown current purpose, independent ways to deliver an established value, comparison with the current arrangement, official-source uncertainty, and fixed constraints. The [v0.1.2 report](results/2026-09-08-directions/report.md) records focused response samples and a scripted purpose-correction continuation. This is separate from a complete-conversation evaluation.
+
 ## Running a sample
 
-Use one fresh context per case. Provide only the case's `context` and `user` fields as the simulated conversation. Do not give the actor its `checks`, the rubric, worked examples, or earlier outputs.
+Use one fresh context per case. Provide only the case's `context`, `user`, and any `source_context` as the simulated conversation. Do not give the actor its `checks`, the rubric, worked examples, or earlier outputs. Supply a scripted continuation only after the first response is saved.
 
 - **Control:** no Zero-Base Thinking instructions.
 - **With skill:** load `skills/zero-base-thinking/SKILL.md` and its linked question guide when relevant. Continuation cases retain the fact that the user invoked the skill earlier.
@@ -31,7 +33,9 @@ Judge the meaning of the response, not whether it repeats a keyword or a heading
 | Comprehension repair | An explanation request produces simpler consequences or an example, with the decision still pending. |
 | Adaptation | Explicit preferences and explanation requests change subsequent wording without a competence label, a fixed failure threshold, or unrequested memory writes. |
 | Reframing | Documents and previous decisions are reconsidered as evidence; a new insight can change the question. |
+| Purpose | The opening checks a tentative intended value or elicits it when unknown. A purpose already settled in the current exchange is carried forward; an inherited definition is not presumed to be agreement. |
 | Blank sheet | Once enough input exists, a positive construction from reconsidered value and constraints is shown before reuse or a final recommendation. |
+| Options and comparison | Options come from different ways to deliver the established value. Benefits, burdens, and uncertainty are comparable; the current arrangement is located afterward, with transition costs assessed separately. |
 | Scope | Current user-specified constraints remain intact. |
 | Epistemic care | Observations, user intentions, and causal or commercial hypotheses are distinguished; metrics and evidence are not invented. |
 | Neutral decision | The response does not equate zero-base thinking with a rewrite, or automatically privilege preservation. |
@@ -45,10 +49,10 @@ Keep raw responses, the actor setup, evaluated file hashes, and case-specific ju
 
 Add a fresh case when a demonstrated gap or new requirement justifies it. Re-run affected cases after behavior changes. Repeat samples or add hosts when the uncertainty being investigated warrants that cost.
 
-The [v0.1.0 local report](results/2026-09-06/report.md) is historical evidence. Its source bytes are pinned to a snapshot revision so later changes do not silently inherit old pass claims. Live UI behavior, host discovery, persistent memory integrations, and multi-agent orchestration require separate end-to-end checks before claiming support has been verified.
+The [v0.1.0 local report](results/2026-09-06/report.md) and [v0.1.1 opening report](results/2026-09-06-opening/report.md) are historical evidence. Their source bytes are pinned to snapshot revisions so later changes do not silently inherit old pass claims. Live UI behavior, host discovery, persistent memory integrations, and multi-agent orchestration require separate end-to-end checks before claiming support has been verified.
 
 ## Installation checks
 
-The [current distribution record](distribution.json) identifies its artifact version, tested scope, and runtime-file hashes. The [archived v0.1.0 record](results/2026-09-06/distribution-0.1.0.json) covers the earlier local-folder, ZIP, and public-repository checks, including Codex and Claude Code project installations. Each installed package contained five files; the original root-level layout had copied 27.
+The [current distribution record](distribution.json) identifies its artifact version, tested scope, and runtime-file hashes. The [archived v0.1.1 record](results/2026-09-06-opening/distribution-0.1.1.json) covers that version's local Codex project copy. The [archived v0.1.0 record](results/2026-09-06/distribution-0.1.0.json) covers the earlier local-folder, ZIP, and public-repository checks, including Codex and Claude Code project installations. Each installed package contained five files; the original root-level layout had copied 27.
 
 CLI telemetry and external audit requests are disabled during recorded installation checks. These checks do not establish user-global writes, Windows/Linux behavior, or native agent-session discovery. Refer to each version's record rather than treating an earlier successful file copy as verification of all later behavior.

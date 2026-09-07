@@ -1,5 +1,7 @@
 # Proactive opening evaluation — v0.1.1
 
+Historical record: the evaluated source bytes are pinned to revision `6dc9a225eea80746ebb6db689dc182490e95c32a` in [report.json](report.json). Later versions do not inherit these behavioral pass claims.
+
 The new default opens an explicit, open-ended zero-base request as a conversation, without requiring a separate request for questions. An explicit proposal-first request and ordinary-task boundaries remain intact.
 
 Two baseline samples used v0.1.0. The mismatch case already opened with a useful question. With rich background, the other baseline said it could already produce a proposal and delivered a complete recommendation without opening a dialogue. The change makes the desired conversational default explicit; this does not establish that every v0.1.0 invocation was passive.

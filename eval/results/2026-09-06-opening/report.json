@@ -109,5 +109,6 @@
     },
     "observation": "Both versions asked a follow-up to clarify what inability to judge meant. The baseline first proposed another arrangement, while the candidate reflected a tentative distinction and asked for actual questions heard during handover. This is a two-response scripted probe, not evidence of human-perceived insight or a completed conversation."
   },
-  "reviewer": "Primary Codex agent; semantic review of all saved responses. No real-user usefulness rating was collected."
+  "reviewer": "Primary Codex agent; semantic review of all saved responses. No real-user usefulness rating was collected.",
+  "source_snapshot_revision": "6dc9a225eea80746ebb6db689dc182490e95c32a"
 }

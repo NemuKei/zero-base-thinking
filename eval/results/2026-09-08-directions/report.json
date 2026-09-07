@@ -1,0 +1,148 @@
+{
+  "artifact_version": "0.1.2",
+  "date": "2026-09-08",
+  "setup": {
+    "method": "Five fresh-context candidate next-response samples, one no-skill control, one v0.1.1 comparison sample, and one scripted candidate continuation. All scenarios are synthetic. Actors saw only case context, user text, supplied source context where present, and the skill snapshot when assigned. They did not receive scoring criteria, worked examples, other outputs, or simulated-action authority.",
+    "candidate_and_no_skill_control": {
+      "model_selection": "Inherited the calling session model and reasoning effort; no per-agent override requested.",
+      "resolved_backend_build": "Not independently exposed by the spawn interface."
+    },
+    "v0_1_1_comparison": {
+      "source_revision": "6dc9a225eea80746ebb6db689dc182490e95c32a",
+      "actor_model_requested": "gpt-6-astra",
+      "reasoning_effort_requested": "medium",
+      "resolved_backend_build": "Not independently exposed by the spawn interface."
+    },
+    "comparison_limit": "The v0.1.1 sample and final actors have different recorded model-selection methods. Results are illustrative semantic checks, not a matched estimate of model-controlled improvement."
+  },
+  "source_sha256": {
+    "skills/zero-base-thinking/SKILL.md": "8299d9e425f179a8a2ebad68c0c125354bd72c09d088d72b1ff942b7214aea6e",
+    "skills/zero-base-thinking/references/questions.md": "08cb1b625d5db2c9ca114c182ba8abf60cd973d3f5d042aac1349a4f30d7eeef",
+    "skills/zero-base-thinking/agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a",
+    "eval/direction-cases.json": "fe52b8fb8789073fd596caa69308f2cb9a91ddf7251f8b445b77123e659a6131"
+  },
+  "comparison_samples": [
+    {
+      "case": "custom-documentation",
+      "arm": "no-skill control",
+      "status": "partial",
+      "criterion_verdicts": {
+        "purpose-held-constant": "pass",
+        "options-derived-from-value-not-change-levels": "partial",
+        "credible-furthest-reset-considered": "pass",
+        "current-arrangement-mapped-after-options": "fail",
+        "benefits-and-disadvantages-comparable": "pass",
+        "official-attribution-grounded": "pass",
+        "no-execution": "pass"
+      },
+      "notes": "Already recommends dropping custom Docs management and explains tradeoffs. Its third option explicitly reproduces the current taxonomy and ledgers, instead of separately locating the current state after an independently constructed set. This is a useful response with a gap against the newly requested comparison structure.",
+      "response": "responses/control-no-skill-custom-documentation.md"
+    },
+    {
+      "case": "custom-documentation",
+      "arm": "v0.1.1",
+      "status": "partial",
+      "criterion_verdicts": {
+        "purpose-held-constant": "pass",
+        "options-derived-from-value-not-change-levels": "fail",
+        "credible-furthest-reset-considered": "pass",
+        "current-arrangement-mapped-after-options": "fail",
+        "benefits-and-disadvantages-comparable": "pass",
+        "official-attribution-grounded": "pass",
+        "no-execution": "pass"
+      },
+      "notes": "Already provides a positive blank-sheet proposal, a no-custom-management alternative, and benefits/costs. The comparison starts with a partial change to the current arrangement, then a minimal entrance, then no dedicated management. This exposes the newly targeted current-state framing; it does not show that v0.1.1 could not consider radical options.",
+      "response": "responses/baseline-custom-documentation.md"
+    }
+  ],
+  "candidate_samples": [
+    {
+      "case": "custom-documentation",
+      "status": "pass",
+      "criterion_verdicts": {
+        "purpose-held-constant": "pass",
+        "options-derived-from-value-not-change-levels": "pass",
+        "credible-furthest-reset-considered": "pass",
+        "current-arrangement-mapped-after-options": "pass",
+        "benefits-and-disadvantages-comparable": "pass",
+        "official-attribution-grounded": "pass",
+        "no-execution": "pass"
+      },
+      "notes": "Honors the proposal-first request. Derives two mechanisms: reconstruct context when needed, or leave a handover at interruption. Maps the existing ledgers afterward. The no-custom-management option is linked to lower maintenance; transition and retained knowledge are considered separately. Official guidance is identified as supplied source context, not independent proof of the proposed arrangement.",
+      "response": "responses/final-custom-documentation.md"
+    },
+    {
+      "case": "official-source-unavailable",
+      "status": "pass",
+      "criterion_verdicts": {
+        "purpose-held-constant": "pass",
+        "options-derived-from-value-not-change-levels": "pass",
+        "does-not-invent-official-authority": "pass",
+        "maps-current-only-where-evidenced": "pass",
+        "does-not-force-three-options": "pass"
+      },
+      "notes": "Offers work-based practice, learning as needed without a recurring session, and a conditional official-guidance option. Does not invent a standard or force a current-state mapping without evidence. This sample has three relevant options; the documentation sample has two. These counts show flexibility in these outputs, not a guarantee about future runs.",
+      "response": "responses/final-official-source-unavailable.md"
+    },
+    {
+      "case": "preserve-specified-core",
+      "status": "pass",
+      "criterion_verdicts": {
+        "purpose-held-constant": "pass",
+        "keeps-current-explicit-constraints": "pass",
+        "independent-feasible-mechanisms": "pass",
+        "current-mapping-follows-option-generation": "pass",
+        "no-execution": "pass"
+      },
+      "notes": "Preserves the verified rules and input data. Derives shared references, generated reports, and shared results as conditional mechanisms for reducing transcription. Describes the present manual connection after the options and leaves recipient/form requirements unresolved.",
+      "response": "responses/final-preserve-specified-core.md"
+    },
+    {
+      "case": "purpose-unsettled",
+      "status": "pass",
+      "criterion_verdicts": {
+        "elicits-current-user-purpose": "pass",
+        "does-not-treat-document-purpose-as-agreement": "pass",
+        "does-not-jump-to-final-options": "pass",
+        "opens-with-a-useful-question": "pass"
+      },
+      "notes": "Asks who should experience what useful change. Does not inherit the old document's complete-daily-recording goal, propose final arrangements, or invent a purpose to confirm. Offers explanation help, uncertainty, and free response.",
+      "response": "responses/final-purpose-unsettled.md"
+    },
+    {
+      "case": "purpose-confirmation",
+      "status": "pass",
+      "criterion_verdicts": {
+        "tentatively-reflects-upstream-purpose": "pass",
+        "one-purpose-confirmation-before-options": "pass",
+        "invites-correction-or-addition": "pass",
+        "explanation-help-and-free-response": "pass",
+        "does-not-confuse-current-means-with-value": "pass"
+      },
+      "notes": "Reflects the background's intended outcomes tentatively and asks one confirmation question before presenting solutions. Explicitly permits correction, additions, uncertainty, and explanation help.",
+      "response": "responses/final-purpose-confirmation.md"
+    }
+  ],
+  "continuation_probe": {
+    "case": "purpose-confirmation",
+    "delivery": "Only after the first response was saved, the same actor received the case's scripted correction of the intended value and explicit request for proposals.",
+    "response": "responses/final-purpose-corrected.md",
+    "criterion_verdicts": {
+      "adopts-corrected-purpose-without-reconfirmation": "pass",
+      "does-not-retain-rejected-priority": "pass",
+      "derives-distinct-mechanisms-from-corrected-value": "pass",
+      "maps-current-after-options": "pass",
+      "benefits-disadvantages-and-uncertainty": "pass",
+      "no-execution": "pass"
+    },
+    "observation": "Adopts independent judgment in unexpected situations as the settled purpose, with no second confirmation. Teaching effort is compared as a burden rather than preserved as the prior goal. Proposes decision references, unfamiliar-case practice, and supported workplace decisions; maps existing materials/sessions conditionally afterward."
+  },
+  "reviewer": "Primary Codex agent; semantic review of all eight saved responses.",
+  "limits": [
+    "One sample per case/arm, not repeated sampling of the same case or a statistical improvement estimate.",
+    "The no-skill and v0.1.1 responses already offered substantial resets. The new contract concerns establishing intention, generating independent mechanisms, and ordering current-state comparison.",
+    "The continuation is scripted and includes an explicit proposal request. It does not establish that users gained insight or that the model would select the right transition moment without that cue.",
+    "No complete paired dialogue, real-user usefulness rating, native question UI, host discovery, global install flow, or Windows/Linux run was tested.",
+    "Historical v0.1.0/v0.1.1 behavior checks were not rerun wholesale. Intermediate draft samples are not counted as final-version evidence."
+  ]
+}

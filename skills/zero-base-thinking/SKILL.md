@@ -4,7 +4,7 @@ description: >-
   Use when the user explicitly requests zero-base thinking, a blank-sheet reconsideration, or ゼロベースで考えて for a project, skill, business idea, or new concept. Do not infer this request from frustration, an ordinary improvement, a new-build task, or a mention of the skill alone.
 license: MIT
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Zero-Base Thinking
@@ -23,9 +23,9 @@ Past decisions and documents are evidence of what was decided and why. Their ass
 
 ## Open the dialogue
 
-An open-ended invocation is a request to start the conversation. In the first response, briefly reflect a relevant observation or tentative tension, then ask one concrete question that opens the inquiry. Use [the question guide](references/questions.md) from this first question, including understandable consequences, explanation help, and free response. Do not wait for an additional request to ask questions or replace the opening with a completed analysis and an optional invitation to discuss it.
+An open-ended invocation is a request to start the conversation. Normally, use the first turn to establish the upstream purpose, intention, and value before generating solutions: briefly state your tentative understanding in everyday language, then ask one question such as “Is this what you want to preserve?” Make correction, additions, and a different purpose easy. Use [the question guide](references/questions.md) from this first question, including understandable consequences, explanation help, and free response. Do not wait for an additional request to ask questions or replace the opening with a completed analysis and an optional invitation to discuss it.
 
-When no topic is clear, help the user find a starting point with one approachable question; a finished problem statement is not a prerequisite. When context is rich, ask about a meaningful unsettled point rather than repeating an already stated purpose. Having enough information to suggest a solution does not, by itself, turn an open-ended invocation into a request for a report.
+When the intended value is unknown, ask what outcome would matter instead of inventing a purpose to confirm. When no topic is clear, help the user find a starting point with one approachable question; a finished problem statement is not a prerequisite. A purpose written in inherited material remains provisional until the current user adopts it. When the user has already explicitly settled the purpose in the current exchange, carry it forward without another confirmation and ask the next useful question or begin the construction when ready. Rich background alone does not establish that agreement or turn an open-ended invocation into a request for a report.
 
 If the user explicitly requests a proposal, conclusion, or other deliverable instead of an interview, or asks to see a draft before more questions, honor that format using the available information and mark assumptions. A request to pause also takes precedence. The conversational default does not make an opening question a gate for every request.
 
@@ -47,6 +47,8 @@ Continue until the current value and scope support a meaningful blank-sheet atte
 
 ## 3. Construct from a blank sheet — required
 
+Use the working purpose, intention, and value that the user has explicitly stated or the dialogue has established. An inherited document's purpose is not automatically that agreement. Clarify material uncertainty before making a firm recommendation; if the user requests an early draft, state the conditional purpose and open assumptions. Hold the agreed intention constant while exploring means. Reopen it explicitly if new information changes it.
+
 Create a short brief containing:
 
 - The value or purpose reconsidered in this conversation, with unresolved parts marked.
@@ -58,17 +60,21 @@ Leave the inherited architecture, feature list, previous recommendation, and sun
 
 From this brief, construct a positive account of what would make sense if no current solution existed: who receives what change, through what mechanism, and what the simplest useful arrangement would be. An arrangement can be a conversation, service, process, tool, or no new undertaking. Merely promising to “think from zero” or deleting features from the old backlog does not complete this step.
 
+Derive the candidate directions from different ways to deliver that same value. Do not generate the set by starting with “keep the current setup,” “modify it,” and “replace it.” Deliberately consider the furthest useful reset within the agreed goal and actual constraints, including a different means, no custom arrangement, or no new undertaking. Surface it when it has a plausible goal-linked benefit; do not discard it because you assume the user would not choose it. The number of useful options is not fixed.
+
+When a standard or official baseline is relevant, consider it on the same basis. Ground an official attribution in current primary sources and distinguish the documented guidance from your application of it. Official status alone does not establish that an option meets the user's goal.
+
 If isolated agent work is available and authorized, it can receive only this brief and relevant raw evidence to propose an independent construction. Otherwise perform the pass in the current conversation. Neither method guarantees freedom from anchoring; do not claim that context has been erased.
 
 Make the construction visible in a concise proposal before comparing it with the current approach. If it converges on the current design, explain how the reconsidered value and constraints lead there. The pass remains required when the current solution looks adequate. If more user input is needed, leave it pending rather than claiming it is complete.
 
-## 4. Compare the futures, then consider reuse
+## 4. Compare the options, then locate the current approach
 
-Compare the blank-sheet construction with the relevant existing approach and credible alternatives. Include a partial change, another means, pausing, or stopping when they are live alternatives; do not manufacture a fixed number of options.
+Present the independently derived options and compare their main benefits, disadvantages, and uncertainties against the agreed intention. Explain how each mechanism produces the desired result and what the user would experience. A compact table can make the tradeoffs clear; a method name or a generic advantage is not enough.
 
-For each consequential choice, make the anticipated result imaginable: what changes for whom, what they would do or experience next, what burden or opportunity is gained or lost, and why the result might follow. Connect that result to the user's stated intention. Mark uncertain outcomes and what would verify them. A method name or a generic advantage is not enough to support a choice.
+Then map the current arrangement onto those options using evidence: it may be closest to one, combine several, or fit none. State the material differences without redefining the options to accommodate what already exists. The current arrangement is a comparison subject, not the default first option.
 
-Judge future work, verification, transition, ongoing effort, and expected value. Past effort does not make a design correct; a cheap rewrite does not make it valuable. Now identify which knowledge, logic, data, or implementation is useful to retain.
+Separate which option makes sense if starting now from how to move there from the current state. Assess future verification, transition, ongoing effort, and expected value at this stage, then identify useful knowledge, logic, data, or implementation to retain. Do not automatically choose the smallest, middle, or most radical option. A staged transition may be sensible without changing the goal-derived target to justify preservation.
 
 Recommendations are reasoned proposals that the user can reject or reshape. Choosing an option does not reveal an unspoken motive or prove comprehension. When the user expresses confusion, repair the explanation before treating their choice as settled.
 
