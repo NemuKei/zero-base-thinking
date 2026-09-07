@@ -1,0 +1,242 @@
+{
+  "artifact_version": "0.1.2",
+  "date": "2026-09-08",
+  "scope": "Three paired complete synthetic conversations, including an explicit return to ordinary editing. This is an automated conversation evaluation, not real-user usefulness evidence.",
+  "source_snapshot_revision": "74b642f936efe260ad1f152b61805c5e8b5bdffe",
+  "source_sha256": {
+    "skills/zero-base-thinking/LICENSE": "3953c4810e77a624505324e77580f133551dc2f94d7d9c6e07b23ba66c9f7c2b",
+    "skills/zero-base-thinking/INSTALL.md": "c7faea7da00f14b3f6a8b7954e2a59edc87e97dbdea57e6a1a6ae6675645354a",
+    "skills/zero-base-thinking/SKILL.md": "8299d9e425f179a8a2ebad68c0c125354bd72c09d088d72b1ff942b7214aea6e",
+    "skills/zero-base-thinking/references/questions.md": "08cb1b625d5db2c9ca114c182ba8abf60cd973d3f5d042aac1349a4f30d7eeef",
+    "skills/zero-base-thinking/agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a"
+  },
+  "setup_record": "setup.json",
+  "protocol": "protocol.md",
+  "role_instructions": "role-prompts.md",
+  "case_facts": "../../conversation-cases.json",
+  "judgments": [
+    {
+      "case": "purpose-recovery",
+      "arm": "control",
+      "practical_outcome": "pass",
+      "criteria": {
+        "intended-value-and-constraints": "pass",
+        "visible-value-based-construction": "pass",
+        "meaningful-alternatives": "pass",
+        "concrete-explanation-repair": "pass",
+        "changed-intent-follow-through": "pass",
+        "honors-proposal-request": "pass",
+        "current-comparison-after-independent-options": "partial",
+        "bounded-next-check": "pass",
+        "answer-handling-and-factual-care": "pass",
+        "return-to-ordinary-edit": "pass"
+      },
+      "evidence": "A1 reopens the inherited daily-recording objective; A2 explains with concrete examples. U3's workplace-application goal and evaluation discomfort shape A3-A5. A4 supplies substantive alternatives when requested, but its first option is explicitly framed as shrinking the existing arrangement. A5 checks practice, burden, and perceived evaluation pressure. A6 returns only the requested edit.",
+      "transcript": "transcripts/purpose-recovery-control.md"
+    },
+    {
+      "case": "purpose-recovery",
+      "arm": "skill",
+      "practical_outcome": "pass",
+      "criteria": {
+        "intended-value-and-constraints": "pass",
+        "visible-value-based-construction": "pass",
+        "meaningful-alternatives": "pass",
+        "concrete-explanation-repair": "pass",
+        "changed-intent-follow-through": "pass",
+        "honors-proposal-request": "pass",
+        "current-comparison-after-independent-options": "pass",
+        "bounded-next-check": "pass",
+        "answer-handling-and-factual-care": "pass",
+        "return-to-ordinary-edit": "pass"
+      },
+      "evidence": "A2 concretely repairs the explanation; A3 adopts U3's new value without generalizing it to other members. A4 derives direct practice, private notes, and individual consultation before locating the current features. A5 confirms a personal one-attempt experiment, leaving efficacy and group changes open. A6 returns only the edit. A5 names application and obstacles but carries the earlier burden/evaluation concern less explicitly than A4 or control A5.",
+      "transcript": "transcripts/purpose-recovery-skill.md"
+    },
+    {
+      "case": "sound-current-approach",
+      "arm": "control",
+      "practical_outcome": "pass",
+      "criteria": {
+        "intended-value-and-constraints": "pass",
+        "visible-value-based-construction": "partial",
+        "meaningful-alternatives": "partial",
+        "concrete-explanation-repair": "not_applicable",
+        "changed-intent-follow-through": "not_applicable",
+        "honors-proposal-request": "not_applicable",
+        "current-comparison-after-independent-options": "partial",
+        "bounded-next-check": "pass",
+        "answer-handling-and-factual-care": "pass",
+        "return-to-ordinary-edit": "pass"
+      },
+      "evidence": "A1 derives the needed functions and conditionally supports the existing list and chat. It examines fit and maintenance uncertainty but does not develop another viable delivery mechanism. A2 accepts U2's one-time participant inquiry without treating unknown burden as absent. A3 returns only the new heading.",
+      "transcript": "transcripts/sound-current-approach-control.md"
+    },
+    {
+      "case": "sound-current-approach",
+      "arm": "skill",
+      "practical_outcome": "pass",
+      "criteria": {
+        "intended-value-and-constraints": "pass",
+        "visible-value-based-construction": "pass",
+        "meaningful-alternatives": "pass",
+        "concrete-explanation-repair": "not_applicable",
+        "changed-intent-follow-through": "not_applicable",
+        "honors-proposal-request": "not_applicable",
+        "current-comparison-after-independent-options": "pass",
+        "bounded-next-check": "pass",
+        "answer-handling-and-factual-care": "pass",
+        "return-to-ordinary-edit": "pass"
+      },
+      "evidence": "A1 constructs the path from finding a tool to agreeing handover and return, comparing asking the chat each time with maintaining a list. It supports the current arrangement conditionally. A2 proposes one loan through return and explicitly leaves unobserved maintenance effort unknown. A3 confirms U3's decision without more interviewing; A4 performs only the edit.",
+      "transcript": "transcripts/sound-current-approach-skill.md"
+    },
+    {
+      "case": "proposal-first-scope",
+      "arm": "control",
+      "practical_outcome": "pass",
+      "criteria": {
+        "intended-value-and-constraints": "pass",
+        "visible-value-based-construction": "pass",
+        "meaningful-alternatives": "pass",
+        "concrete-explanation-repair": "not_applicable",
+        "changed-intent-follow-through": "not_applicable",
+        "honors-proposal-request": "pass",
+        "current-comparison-after-independent-options": "partial",
+        "bounded-next-check": "pass",
+        "answer-handling-and-factual-care": "pass",
+        "return-to-ordinary-edit": "pass",
+        "new-constraint-follow-through": "pass"
+      },
+      "evidence": "A1 immediately offers three mechanisms and preserves verified rules and original data, while describing the first option as a small change to current reports. U2's required format and removable internal reports lead to a combined approach in A2. The representative-case check includes correctness, format, information coverage, effort, and repair consistency with limits stated. A3 returns only the edit.",
+      "transcript": "transcripts/proposal-first-scope-control.md"
+    },
+    {
+      "case": "proposal-first-scope",
+      "arm": "skill",
+      "practical_outcome": "pass",
+      "criteria": {
+        "intended-value-and-constraints": "pass",
+        "visible-value-based-construction": "pass",
+        "meaningful-alternatives": "pass",
+        "concrete-explanation-repair": "not_applicable",
+        "changed-intent-follow-through": "not_applicable",
+        "honors-proposal-request": "pass",
+        "current-comparison-after-independent-options": "pass",
+        "bounded-next-check": "pass",
+        "answer-handling-and-factual-care": "pass",
+        "return-to-ordinary-edit": "pass",
+        "new-constraint-follow-through": "pass"
+      },
+      "evidence": "A1 supplies proposals immediately from a single verified result delivered to recipients, leaves format and software capability unknown, and maps the current approach after the options. A2 accepts U2's combined direction and checks the required format and internal information coverage using one case, with implementation still open. A3 performs only the edit.",
+      "transcript": "transcripts/proposal-first-scope-skill.md"
+    }
+  ],
+  "observations": [
+    {
+      "type": "coverage-watchpoint",
+      "case": "purpose-recovery",
+      "arm": "skill",
+      "turns": [
+        "A4",
+        "A5"
+      ],
+      "observation": "The final check explicitly covers application and obstacles, but not separately the burden or perceived evaluation pressure that earlier shaped the proposal. Those concerns were covered at A4 and the user narrowed the chosen trial at U5.",
+      "interpretation": "A narrower final check, not a demonstrated harmful outcome or justified runtime change. Consider whether this concern recurs in real-use feedback before adding instructions."
+    },
+    {
+      "type": "comparison-shape",
+      "observation": "The skill samples make alternative mechanisms and later current-state mapping more visible. Controls still offer useful proposals and already consider substantial resets. The sound control examines the current arrangement's functional fit but develops fewer alternatives.",
+      "interpretation": "Observed differences in these samples; not an overall effectiveness or causal improvement estimate."
+    }
+  ],
+  "adaptive_input_differences": [
+    {
+      "case": "purpose-recovery",
+      "difference": "Both users request explanation, then reveal the same workplace-application value and evaluation discomfort, and later release private-reflection acceptability and no retention obligation. Control U4 defers picking a concrete learning example; skill U4 explicitly cannot identify the obstacle. Control U5 independently chooses two weeks; skill U5 chooses one attempt. These are simulated prospective choices, not observed human behavior."
+    },
+    {
+      "case": "sound-current-approach",
+      "difference": "Both U2 replies supply the same account/usage constraints and unknown maintenance burden. Control U2 proposes asking participants once; skill U2 asks what to observe in the next loan and later supplies an explicit U3 decision. This contributes to the different response count and observation plan."
+    },
+    {
+      "case": "proposal-first-scope",
+      "difference": "Both U2 replies disclose one mandatory external format and removable internal duplication. Control U2 asks what to verify; skill U2 already selects two verification questions and leaves implementation unspecified. These differing requests help explain the broader control checklist."
+    }
+  ],
+  "human_feedback": {
+    "collected_for_these_runs": false,
+    "perceived_insight": "unmeasured",
+    "experienced_effort": "unmeasured",
+    "note": "Statements such as understanding, choosing, and feeling able to try were generated by the simulated-user roles. They are not human ratings."
+  },
+  "decision": {
+    "runtime_change": "none",
+    "reason": "No material failure in the evaluated skill conversations justified an instruction change. Preserve the current runtime and report the final-check watchpoint and comparison limits.",
+    "issue_status": "Keep issue #1 open for explicit human usefulness/effort feedback and any warranted follow-up. The automated paired-conversation evidence is now available."
+  },
+  "review": {
+    "primary": "Primary Codex agent read all saved assistant and user messages.",
+    "independent": "independent-review.md",
+    "note": "Reviewers use turn references and distinguish practical outcome, comparison structure, and human usefulness."
+  },
+  "limits": [
+    "One paired run per case; not repeated sampling or a statistical improvement estimate.",
+    "Adaptive user actors share scenario facts but provide different wording, timing, prospective choices, and follow-up requests. No turn-by-turn matched causal comparison is claimed.",
+    "Recovery explanation and later value discovery are preauthored simulation events. All runs end with a scenario-defined ordinary-edit request after the simulated user considers the discussion sufficiently settled.",
+    "Actor model selection and reasoning effort use the same inheritance mechanism, but effective backend equality and exact configuration are not independently exposed.",
+    "Fresh roles retain only their own dialogue, but inherited host instructions/catalogs are uncontrolled. The control is not a bare-model ablation; skill-use announcements can reveal the arm to the simulated user.",
+    "No native question UI, global installation, actual project execution, or human-perceived usefulness was tested."
+  ],
+  "case_sha256": "b2ed0a7270c9dbed79fb964a873a0bdc864099de59bcc0de2eef619cd3309564",
+  "run_summary": [
+    {
+      "case": "purpose-recovery",
+      "arm": "control",
+      "assistant_turns": 6,
+      "assistant_characters": 2889,
+      "termination": "ordinary_edit_answered",
+      "ordinary_edit_exact_match": true
+    },
+    {
+      "case": "purpose-recovery",
+      "arm": "skill",
+      "assistant_turns": 6,
+      "assistant_characters": 2904,
+      "termination": "ordinary_edit_answered",
+      "ordinary_edit_exact_match": true
+    },
+    {
+      "case": "sound-current-approach",
+      "arm": "control",
+      "assistant_turns": 3,
+      "assistant_characters": 640,
+      "termination": "ordinary_edit_answered",
+      "ordinary_edit_exact_match": true
+    },
+    {
+      "case": "sound-current-approach",
+      "arm": "skill",
+      "assistant_turns": 4,
+      "assistant_characters": 1535,
+      "termination": "ordinary_edit_answered",
+      "ordinary_edit_exact_match": true
+    },
+    {
+      "case": "proposal-first-scope",
+      "arm": "control",
+      "assistant_turns": 3,
+      "assistant_characters": 1633,
+      "termination": "ordinary_edit_answered",
+      "ordinary_edit_exact_match": true
+    },
+    {
+      "case": "proposal-first-scope",
+      "arm": "skill",
+      "assistant_turns": 3,
+      "assistant_characters": 1524,
+      "termination": "ordinary_edit_answered",
+      "ordinary_edit_exact_match": true
+    }
+  ]
+}

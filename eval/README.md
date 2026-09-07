@@ -6,6 +6,8 @@ The focused [opening cases](opening-cases.json) add open-ended invocation with r
 
 The [direction and purpose cases](direction-cases.json) cover a purpose-confirmation opening, an unknown current purpose, independent ways to deliver an established value, comparison with the current arrangement, official-source uncertainty, and fixed constraints. The [v0.1.2 report](results/2026-09-08-directions/report.md) records focused response samples and a scripted purpose-correction continuation. This is separate from a complete-conversation evaluation.
 
+The [complete-conversation cases](conversation-cases.json) add three paired dialogues with separate assistant and simulated-user roles: purpose recovery, a sound current arrangement, and a proposal-first request with fixed constraints. The [complete-conversation report](results/2026-09-08-conversations/report.md) records all six transcripts through an ordinary edit, comparison differences, and an independent review. Human-perceived usefulness remains unmeasured; the [protocol](results/2026-09-08-conversations/protocol.md) explains the simulation limits.
+
 ## Running a sample
 
 Use one fresh context per case. Provide only the case's `context`, `user`, and any `source_context` as the simulated conversation. Do not give the actor its `checks`, the rubric, worked examples, or earlier outputs. Supply a scripted continuation only after the first response is saved.

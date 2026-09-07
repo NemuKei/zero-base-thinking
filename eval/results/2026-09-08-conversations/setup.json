@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-09-07T21:45:02.158627+00:00",
+  "source_revision": "74b642f936efe260ad1f152b61805c5e8b5bdffe",
+  "artifact_version": "0.1.2",
+  "source_sha256": {
+    "skills/zero-base-thinking/LICENSE": "3953c4810e77a624505324e77580f133551dc2f94d7d9c6e07b23ba66c9f7c2b",
+    "skills/zero-base-thinking/INSTALL.md": "c7faea7da00f14b3f6a8b7954e2a59edc87e97dbdea57e6a1a6ae6675645354a",
+    "skills/zero-base-thinking/SKILL.md": "8299d9e425f179a8a2ebad68c0c125354bd72c09d088d72b1ff942b7214aea6e",
+    "skills/zero-base-thinking/references/questions.md": "08cb1b625d5db2c9ca114c182ba8abf60cd973d3f5d042aac1349a4f30d7eeef",
+    "skills/zero-base-thinking/agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a"
+  },
+  "model_selection": "All actors and simulated users inherit the same calling-session model and reasoning effort. No explicit override requested.",
+  "resolved_backend_build": "Not independently exposed by the collaboration interface.",
+  "conditions": "Offline text dialogue, no native UI, no simulated project execution. One paired run per synthetic case. Separate assistant and user actors per arm. Root maintains the run mapping and does not author adaptive user replies.",
+  "assistant_initial_dispatch_order": [
+    "purpose-recovery-control",
+    "purpose-recovery-skill",
+    "sound-current-approach-skill",
+    "sound-current-approach-control",
+    "proposal-first-scope-control",
+    "proposal-first-scope-skill"
+  ],
+  "cross_arm_carryover": "Each assistant and user role has a fresh initial context. No adaptive replies are copied across arms. Shared host instructions and catalog exposure are not controlled.",
+  "user_simulation": "Same scenario brief per pair; separate adaptive user actors. Explanation request and later value discovery in the recovery case are scenario-defined events, not spontaneous human insight.",
+  "dispatch_order_notes": "Initial assistants were launched in this sequence, with turns interleaved as role responses became available. No random assignment was used. The first reviewer saw an incomplete recorded schedule; this final record includes all six assistant starts.",
+  "delivery_notes": [
+    "One recovery skill follow-up included a mistyped file path and an explicit correct fallback in the same dispatch. The exact user message was preserved in the transcript."
+  ],
+  "automated_run_recorded_at_utc": "2026-09-07T22:11:31.042295+00:00",
+  "completed_at_utc": "2026-09-07T22:19:38.138843+00:00"
+}
