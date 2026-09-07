@@ -6,7 +6,7 @@
 
 An Agent Skill for rethinking projects, workflows, and ideas from a blank sheet.
 
-[Get started](#get-started) · [See a conversation](examples/team-meeting.md) · [日本語](README.ja.md)
+[Get started](#get-started) · [Quick tour](examples/quick-tour.md) · [日本語](README.ja.md)
 
 [MIT](LICENSE) · [Experimental · v0.1.2](eval/README.md)
 
@@ -26,9 +26,9 @@ Install with the [skills CLI](https://github.com/vercel-labs/skills), then choos
 npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
-File installation has been checked in isolated projects. Global installation and discovery inside native agent sessions are still awaiting end-to-end verification. [Installation checks →](eval/README.md#installation-checks)
+Verified with Codex CLI 0.153.4 on macOS 26.6.2: user-wide installation, native skill selection, and invocation from another project. Other agent interfaces and operating systems remain unverified. [Installation checks →](eval/README.md#installation-checks)
 
-In Codex, start a conversation with:
+In Codex CLI, start a conversation with:
 
 ```text
 $zero-base-thinking
@@ -37,6 +37,8 @@ Let's rethink it from zero.
 ```
 
 In Claude Code, use `/zero-base-thinking`. An explicit request such as “Think from a blank sheet” or “ゼロベースで考えて” can also select the skill where the host supports natural-language discovery.
+
+Packaged ZIPs and release notes are available from [Releases](https://github.com/NemuKei/zero-base-thinking/releases).
 
 ## How it thinks
 
@@ -57,7 +59,7 @@ If the purpose is unclear, it helps you find it. If you have already settled it 
 
 Want a proposal first? Say so. The assistant can offer a draft with its assumptions visible. Questions have no answer deadline, and silence is never a decision.
 
-Explore a fictional [team-meeting conversation](examples/team-meeting.md) or a [skill-design conversation in Japanese](examples/skill-redesign.ja.md).
+Start with the [short walkthrough](examples/quick-tour.md). For fuller fictional examples, explore a [team-meeting conversation](examples/team-meeting.md) or a [skill-design conversation in Japanese](examples/skill-redesign.ja.md).
 
 <details>
 <summary><strong>Installation options and host support</strong></summary>

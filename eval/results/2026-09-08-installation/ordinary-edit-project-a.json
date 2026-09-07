@@ -1,0 +1,47 @@
+{
+  "case": "ordinary-edit-project-a",
+  "project": "project-a",
+  "prompt": "README.md の recurring meeting を weekly meeting に置き換えてください。この文言修正だけを行ってください。",
+  "events": [
+    {
+      "type": "agent_message",
+      "text": "README.md の該当文言だけを置き換えます。\n"
+    },
+    {
+      "type": "command_execution",
+      "command": "/bin/zsh -lc \"pwd; rg --files -g AGENTS.md -g README.md -g '\"'!node_modules'\"' -g '\"'!vendor'\"'\"",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "type": "command_execution",
+      "command": "/bin/zsh -lc 'cat README.md'",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "type": "file_change",
+      "status": "completed",
+      "changes": [
+        {
+          "path": "<PROJECT_A>/README.md",
+          "kind": "update"
+        }
+      ]
+    },
+    {
+      "type": "command_execution",
+      "command": "/bin/zsh -lc 'git diff -- README.md'",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "type": "agent_message",
+      "text": "README.md の `recurring meeting` を `weekly meeting` に置き換えました。他の変更は行っていません。"
+    },
+    {
+      "type": "turn.completed"
+    }
+  ],
+  "final_response": "README.md の `recurring meeting` を `weekly meeting` に置き換えました。他の変更は行っていません。"
+}

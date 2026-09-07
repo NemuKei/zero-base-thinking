@@ -55,6 +55,8 @@ The [v0.1.0 local report](results/2026-09-06/report.md) and [v0.1.1 opening repo
 
 ## Installation checks
 
+The [native Codex CLI check](results/2026-09-08-installation/report.md) verifies v0.1.2 user-wide installation from the public repository, TUI selection, direct invocation, Japanese routing from another project, and an ordinary edit on macOS. Its fresh local profile reused an existing account; other native clients and operating systems remain unverified.
+
 The [current distribution record](distribution.json) identifies its artifact version, tested scope, and runtime-file hashes. The [archived v0.1.1 record](results/2026-09-06-opening/distribution-0.1.1.json) covers that version's local Codex project copy. The [archived v0.1.0 record](results/2026-09-06/distribution-0.1.0.json) covers the earlier local-folder, ZIP, and public-repository checks, including Codex and Claude Code project installations. Each installed package contained five files; the original root-level layout had copied 27.
 
-CLI telemetry and external audit requests are disabled during recorded installation checks. These checks do not establish user-global writes, Windows/Linux behavior, or native agent-session discovery. Refer to each version's record rather than treating an earlier successful file copy as verification of all later behavior.
+CLI telemetry and external audit requests are disabled during recorded installation checks. File-copy checks alone do not establish native discovery or invocation; the native record names its verified client and environment. Refer to each record rather than extending its results to other versions, clients, or operating systems.

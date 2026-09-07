@@ -1,0 +1,31 @@
+{
+  "case": "natural-ja-project-b",
+  "project": "project-b",
+  "prompt": "毎週の会議で近況を共有していますが、仕事の受け渡しで行き違いが残ります。この会議をゼロベースで考えて。",
+  "events": [
+    {
+      "type": "agent_message",
+      "text": "「zero-base-thinking」スキルを使い、会議の形をいったん外して、仕事の受け渡しで何を確実にする必要があるかから考えます。"
+    },
+    {
+      "type": "command_execution",
+      "command": "/bin/zsh -lc 'cat <TEST_HOME>/.agents/skills/zero-base-thinking/SKILL.md'",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "type": "command_execution",
+      "command": "/bin/zsh -lc 'cat <TEST_HOME>/.agents/skills/zero-base-thinking/references/questions.md'",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "type": "agent_message",
+      "text": "いったん「毎週集まって近況を話す」という形を外して考えます。守りたい価値は、**仕事を渡した側と受け取った側が、次に誰が何をどこまで・いつまでにするかを同じように理解し、動けること**だと仮に捉えています。\n\n会議を残すかも含めて考える出発点として、この目的はあなたの意図に合っていますか。それとも、チーム全体の状況把握や、困ったときに助け合えることなど、同じくらい大切にしたい役割がありますか。\n\nまだ整理できていなければ、最近起きた行き違いを一つ教えていただく形でも大丈夫です。質問の意味を具体例で説明することもできます。"
+    },
+    {
+      "type": "turn.completed"
+    }
+  ],
+  "final_response": "いったん「毎週集まって近況を話す」という形を外して考えます。守りたい価値は、**仕事を渡した側と受け取った側が、次に誰が何をどこまで・いつまでにするかを同じように理解し、動けること**だと仮に捉えています。\n\n会議を残すかも含めて考える出発点として、この目的はあなたの意図に合っていますか。それとも、チーム全体の状況把握や、困ったときに助け合えることなど、同じくらい大切にしたい役割がありますか。\n\nまだ整理できていなければ、最近起きた行き違いを一つ教えていただく形でも大丈夫です。質問の意味を具体例で説明することもできます。"
+}

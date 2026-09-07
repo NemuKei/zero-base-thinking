@@ -1,7 +1,6 @@
 {
   "artifact_version": "0.1.2",
   "date": "2026-09-08",
-  "cli": "skills@1.5.23",
   "node": "v24.20.0",
   "platform": "macOS",
   "telemetry_during_tests": "disabled",
@@ -21,13 +20,35 @@
       "mode": "copy",
       "initial_install": "pass",
       "exact_file_set": "pass",
-      "file_hash_parity": "pass"
+      "file_hash_parity": "pass",
+      "cli": "skills@1.5.23"
+    },
+    {
+      "agent": "codex",
+      "client": "Codex CLI 0.153.4",
+      "scope": "user-wide in a fresh disposable local profile on macOS 26.6.2",
+      "source": "public GitHub repository",
+      "cli": "skills@1.5.24",
+      "mode": "copy",
+      "initial_install": "pass",
+      "exact_file_set": "pass",
+      "file_hash_parity": "pass",
+      "native_selector": "pass",
+      "direct_invocation_and_question_guide": "pass",
+      "japanese_request_from_another_project": "pass",
+      "ordinary_edit_without_zero_base_dialogue": "pass",
+      "record": "results/2026-09-08-installation/report.json"
     }
   ],
   "previous_record": "results/2026-09-06-opening/distribution-0.1.1.json",
-  "behavioral_sources": "Focused v0.1.2 direction and purpose-opening response samples are recorded separately from historical evaluations.",
+  "behavioral_sources": "Focused response samples, complete synthetic conversations, and native Codex CLI routing checks are recorded separately with their own conditions.",
   "limits": [
-    "User-global writes, native agent discovery and question UIs, and Windows/Linux installations are not verified.",
-    "The v0.1.0 remote-source and multi-host installation records are historical; v0.1.2 was checked only in the scope listed here."
+    "Native verification covers the stated Codex CLI and macOS environment only. Desktop app UI, IDE extension, Claude Code, Windows, and Linux remain unverified natively.",
+    "The disposable local profile reused an existing authenticated account with its synchronized plugins; it was not a new-account or plugin-free test.",
+    "Earlier file-copy checks for other hosts do not extend the native verification scope."
+  ],
+  "cli_versions": [
+    "skills@1.5.23",
+    "skills@1.5.24"
   ]
 }

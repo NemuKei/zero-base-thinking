@@ -6,7 +6,7 @@
 
 プロジェクト、仕事の進め方、まだ形のないアイデアを考え直すためのAgent Skill。
 
-[使ってみる](#使ってみる) · [対話を読む](examples/skill-redesign.ja.md) · [English](README.md)
+[使ってみる](#使ってみる) · [短い実演](examples/quick-tour.ja.md) · [English](README.md)
 
 [MIT](LICENSE) · [実験版 · v0.1.2](eval/README.md)
 
@@ -26,9 +26,9 @@ Zero-Base Thinkingは、まず何を大切にしたいかを確かめ、今か�
 npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
-プロジェクト内へのファイル配置は検証済みです。全プロジェクト共通の導入と、各AIアプリでの認識・呼び出しは、まだ通しでは検証していません。[導入の検証記録 →](eval/README.md#installation-checks)
+Codex CLI 0.153.4・macOS 26.6.2で、全プロジェクト共通の導入、Skill一覧からの選択、別プロジェクトからの呼び出しを確認しました。他のAIアプリやOSでの実動作は未検証です。[導入の検証記録 →](eval/README.md#installation-checks)
 
-Codexでは、こんな一言から始められます。
+Codex CLIでは、こんな一言から始められます。
 
 ```text
 $zero-base-thinking
@@ -37,6 +37,8 @@ $zero-base-thinking
 ```
 
 Claude Codeでは `/zero-base-thinking` を使います。自然文からSkillを選べる環境では、「ゼロベースで考えて」という明示的な依頼も入口になります。
+
+導入用ZIPとリリース情報は[Releases](https://github.com/NemuKei/zero-base-thinking/releases)にあります。
 
 ## 考える順序
 
@@ -57,7 +59,7 @@ Claude Codeでは `/zero-base-thinking` を使います。自然文からSkill�
 
 先に案を見たいときは、そのまま伝えてください。仮定を明らかにした提案から始められます。回答期限は設けず、返事がないことを同意として扱いません。
 
-架空の[Skill設計の対話](examples/skill-redesign.ja.md)と、[チーム会議の対話（英語）](examples/team-meeting.md)で、進み方を読めます。
+まずは[短い対話例](examples/quick-tour.ja.md)で流れをつかめます。詳しい架空の例として、[Skill設計の対話](examples/skill-redesign.ja.md)と[チーム会議の対話（英語）](examples/team-meeting.md)もあります。
 
 <details>
 <summary><strong>導入オプションと利用環境</strong></summary>

@@ -1,0 +1,91 @@
+{
+  "artifact_version": "0.1.2",
+  "date": "2026-09-08",
+  "source_revision": "cb7153ec276f866b44941e3e262b052129c8ade6",
+  "host": {
+    "client": "Codex CLI",
+    "cli_version": "0.153.4",
+    "binary_distribution": "bundled with the installed ChatGPT desktop app; the desktop UI itself was not tested",
+    "os": "macOS",
+    "os_version": "26.6.2",
+    "architecture": "arm64",
+    "node": "v24.20.0",
+    "skills_cli": "1.5.24",
+    "reported_tui_model": "gpt-6-astra",
+    "reasoning_effort": "default; persisted value was null",
+    "resolved_backend_build": "not independently exposed"
+  },
+  "installation": {
+    "source": "public GitHub repository",
+    "scope": "user-wide in a fresh disposable local profile",
+    "command": "npx --yes skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global --agent codex --yes",
+    "mode": "copy",
+    "file_count": 5,
+    "runtime_sha256": {
+      "LICENSE": "3953c4810e77a624505324e77580f133551dc2f94d7d9c6e07b23ba66c9f7c2b",
+      "INSTALL.md": "c7faea7da00f14b3f6a8b7954e2a59edc87e97dbdea57e6a1a6ae6675645354a",
+      "SKILL.md": "8299d9e425f179a8a2ebad68c0c125354bd72c09d088d72b1ff942b7214aea6e",
+      "references/questions.md": "08cb1b625d5db2c9ca114c182ba8abf60cd973d3f5d042aac1349a4f30d7eeef",
+      "agents/openai.yaml": "f576a72cceff612d1b319900dc91fe78866d885a531aa370aefabee64b78e29a"
+    },
+    "preexisting_user_skill_directory": false,
+    "file_set_and_hash_parity": "pass"
+  },
+  "checks": [
+    {
+      "case": "native-skill-selector",
+      "result": "pass",
+      "evidence": "direct-native.json",
+      "observation": "The TUI /skills list displayed Zero-Base Thinking. Selecting it injected the exact installed body from the user-scope path."
+    },
+    {
+      "case": "direct-invocation-and-guide",
+      "result": "pass",
+      "evidence": "direct-native.json",
+      "observation": "A request through the selected $zero-base-thinking entry read the question guide and opened with a tentative purpose confirmation."
+    },
+    {
+      "case": "natural-ja-project-b",
+      "result": "pass",
+      "evidence": "natural-ja-project-b.json"
+    },
+    {
+      "case": "ordinary-edit-project-a",
+      "result": "pass",
+      "evidence": "ordinary-edit-project-a.json"
+    }
+  ],
+  "preservation": {
+    "existing_skill_files_match": true,
+    "existing_skill_symlink_matches": true,
+    "parent_config_matches_before": true
+  },
+  "conditions": [
+    "Only the test child processes used the disposable user-directory setting; the parent environment was not replaced. Both projects had fresh Git directories and no project-local skill copy.",
+    "The TUI connected to a dedicated local app-server over a test-owned Unix socket. Separate codex exec sessions exercised natural-language routing and the ordinary edit.",
+    "A current ChatGPT login cache was reused locally; the refresh credential was not copied. The test did not cover first-time account sign-in. No credentials are included in this record.",
+    "Existing account-synchronized plugins remained available. An unrelated MCP startup warning and a skill-description context-budget notice appeared; this was not an empty-account or plugin-free test.",
+    "The natural-language exec used read-only sandboxing; the ordinary-edit exec used workspace-write. Both used approval_policy=never for the test; the TUI used its on-request default."
+  ],
+  "limits": [
+    "One observed run per routing case, not a guarantee of deterministic phrase selection.",
+    "This verifies Codex CLI on the stated macOS environment, not the desktop app UI, IDE extension, Claude Code, Windows, or Linux.",
+    "The installed package is usable across the two test projects; no actual team-meeting outcome or human-perceived benefit was measured.",
+    "Persisted model names and client versions are reported where observable. The exact backend build and effective default reasoning effort were not independently exposed."
+  ],
+  "sources": [
+    "https://learn.chatgpt.com/docs/build-skills",
+    "https://learn.chatgpt.com/docs/auth",
+    "https://learn.chatgpt.com/docs/developer-commands?surface=cli"
+  ],
+  "cleanup": {
+    "dedicated_app_server_stopped": true,
+    "disposable_profile_and_cached_credentials_removed": true,
+    "final_parent_config_matches_initial_hash": true
+  },
+  "evidence_normalization": [
+    "Test directory paths replaced with placeholders.",
+    "Installer terminal control sequences and trailing whitespace removed.",
+    "Exec traces retain task messages, command/file events, and completion status; credentials and reasoning records are excluded."
+  ]
+}
