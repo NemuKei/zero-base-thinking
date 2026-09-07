@@ -1,88 +1,87 @@
+<div align="center">
+
 # Zero-Base Thinking
 
-[日本語](README.ja.md)
+**Keep the purpose. Rethink the path.**
 
-An instruction-only skill for moments when adding another improvement feels wrong, and for ideas that have not taken shape yet. Use dialogue to discover the actual intention, reconsider documented assumptions, and construct an approach from a blank sheet at least once.
+An Agent Skill for rethinking projects, workflows, and ideas from a blank sheet.
 
-Thinking from zero is mandatory. Rebuilding is one possible decision. A useful outcome may also be a small change, a different approach, an experiment, a pause, or stopping.
+[Get started](#get-started) · [See a conversation](examples/team-meeting.md) · [日本語](README.ja.md)
 
-**Status: experimental, version 0.1.2.** Synthetic behavioral evaluations are described in [eval/README.md](eval/README.md). They do not establish effectiveness across models, users, or real projects.
+[MIT](LICENSE) · [Experimental · v0.1.2](eval/README.md)
 
-## Use it
+</div>
 
-Invoke the skill explicitly using your host's skill selector or, where supported:
+---
 
-```text
-$zero-base-thinking
+Projects accumulate decisions. Some still serve their purpose; others become assumptions nobody revisits.
 
-Something feels wrong about this project. Help me work out what it is,
-then reconsider the purpose and approach from zero.
-```
+Zero-Base Thinking helps you agree on what matters, then find ways to achieve it as if starting today. Use it when an existing approach feels wrong, or when a new idea is still taking shape.
 
-Other requests include “ゼロベースで考えて” and “Think from a blank sheet; keep the calculation rules, but reconsider the workflow.” A new concept does not need an existing project or a feeling of dissatisfaction.
+## Get started
 
-On an open-ended invocation, the assistant normally starts with one question to check the upstream purpose, intention, and value to preserve. It offers a tentative understanding for you to correct, or asks what outcome matters when that is unknown. A purpose already settled in the current exchange carries forward without repeated confirmation. A separate request to begin interviewing is unnecessary; if you want a proposal first, say so. Options explain the consequences of choosing them, and provide a route to ask for an explanation. Free response, mixed answers, disagreement, and new insights are part of the process. There is no answer deadline. Explanation requests help adapt subsequent wording within the conversation; they do not become an expertise score or a persistent profile.
-
-The aim is to draw out the user's own meaning. Choosing an option can open space for reasons, concrete experiences, and things not yet said; it need not finish the inquiry.
-
-At the proposal stage, the skill holds the established intention and desired value constant, then derives rational options as if starting now. It considers a radical alternative when that could serve the goal, with benefits, disadvantages, and uncertainty. Only afterward does it locate the current arrangement among the options and consider transition work. It does not build a fixed ladder of “keep, modify, replace,” or require exactly three proposals.
-
-See a [team-meeting example](examples/team-meeting.md) or a [Japanese skill-design example](examples/skill-redesign.ja.md). The examples and evaluation fixtures are invented, rather than records of a particular person's projects or preferences.
-
-## Install
-
-With a coding agent that can install skills, ask:
-
-```text
-Install Zero-Base Thinking from https://github.com/NemuKei/zero-base-thinking
-for my coding agent. Review any existing installation before replacing it,
-then verify that the skill and its question guide are available.
-```
-
-Or, with Node.js 22.20 or later, run:
+Install with the [skills CLI](https://github.com/vercel-labs/skills), then choose your agent when prompted. Requires Node.js 22.20 or later.
 
 ```sh
 npx skills add NemuKei/zero-base-thinking --skill zero-base-thinking --global
 ```
 
-**Verification scope:** file installation in isolated projects has been checked. User-wide (`--global`) installation and discovery/invocation inside native agent sessions have not yet been verified end to end. See the [installation checks](eval/README.md#installation-checks).
+File installation has been checked in isolated projects. Global installation and discovery inside native agent sessions are still awaiting end-to-end verification. [Installation checks →](eval/README.md#installation-checks)
 
-Select your agent if prompted. The [standard skills CLI](https://github.com/vercel-labs/skills) handles the destination. To target Codex directly, append `--agent codex`; for Claude Code, append `--agent claude-code`. To install only for one project, run the command from that project and omit `--global`. For a downloaded source or extracted skill folder, replace `NemuKei/zero-base-thinking` with that folder's path, or with `.` when running inside it.
+In Codex, start a conversation with:
 
-The installable package lives in [`skills/zero-base-thinking/`](skills/zero-base-thinking/INSTALL.md). Its five files include all runtime instructions, metadata, the license, and a short installation note. Contributor documentation and synthetic evaluation records stay outside the installed skill. No custom installer or persistent background process is required.
+```text
+$zero-base-thinking
+This project has accumulated a lot of rules.
+Let's rethink it from zero.
+```
 
-Use your host's skill selector to confirm discovery. In Codex, invoke `$zero-base-thinking`; in Claude Code, invoke `/zero-base-thinking`. See the [short installation note](skills/zero-base-thinking/INSTALL.md) for the manual fallback.
+In Claude Code, use `/zero-base-thinking`. An explicit request such as “Think from a blank sheet” or “ゼロベースで考えて” can also select the skill where the host supports natural-language discovery.
 
-## Activation and host support
+## How it thinks
 
-The included Codex metadata permits prompt-based discovery (`allow_implicit_invocation: true`) so an explicit natural-language request can select the skill. The description and the entry guard restrict it to such requests: frustration, a routine improvement, or an ordinary new-build request is not sufficient. This is semantic routing, not a guaranteed phrase parser.
+1. **Agree on what matters.** Check the purpose, intention, and value worth preserving. Old documents are evidence to examine.
+2. **Start from a blank sheet.** Find different ways to deliver that value, including a substantial reset when it has a useful advantage.
+3. **Make the tradeoffs clear.** Describe what each option would change, its benefits, its burden, and what remains uncertain.
+4. **Place the current approach.** See which option it resembles, then consider what to retain and how to move forward.
 
-For command/selector-only activation in Codex, set `policy.allow_implicit_invocation` to `false` in the installed `agents/openai.yaml`. The natural-language phrase alone then does not provide that automatic discovery route; invoke the skill explicitly through the host. See [OpenAI's skills documentation](https://learn.chatgpt.com/docs/build-skills).
+Keeping what works, changing direction, trying a small experiment, pausing, and stopping can all be useful outcomes. The blank-sheet pass comes before the choice.
 
-The format follows the [Agent Skills specification](https://agentskills.io/specification). Host-specific metadata and question interfaces are not part of a universal UI contract. A host without a suitable question tool can use permitted untimed text dialogue. The skill cannot remove a countdown or a default selection that a host does not allow it to control.
+## A conversation you can steer
 
-## What the skill does
+The assistant normally opens by checking its understanding:
 
-1. Ground a mismatch or opportunity and reconsider the intended value.
-2. Use understandable questions to reveal missing intentions and assumptions.
-3. Derive independent ways to deliver the established value without inheriting the current solution as the premise.
-4. Compare those options, locate the current arrangement among them, then assess transition work and reuse.
-5. Return the question worth answering, a proposed or chosen direction, and remaining uncertainty or a next verification.
+> Is this the purpose and value you want to preserve?
 
-Current user-specified boundaries still matter. Documents can be reassessed as design evidence; that does not erase actual obligations or grant permission to change live systems.
+If the purpose is unclear, it helps you find it. If you have already settled it in the conversation, it moves forward. You can correct the premise, combine options, ask for an example, or say you cannot decide yet. Your answers shape the next question.
 
-The skill has no mandatory dependency on a repository, memory system, model vendor, other skill, network connection, or subagent. Where available and authorized, a separate agent can construct an alternative using a brief with reconsidered intentions and evidence. A separate context reduces some shared context; it does not guarantee an unbiased result.
+Want a proposal first? Say so. The assistant can offer a draft with its assumptions visible. Questions have no answer deadline, and silence is never a decision.
 
-## Maintaining and evaluating
+Explore a fictional [team-meeting conversation](examples/team-meeting.md) or a [skill-design conversation in Japanese](examples/skill-redesign.ja.md).
 
-[`skills/zero-base-thinking/SKILL.md`](skills/zero-base-thinking/SKILL.md) owns the workflow. Its [`references/questions.md`](skills/zero-base-thinking/references/questions.md) owns the question design details and is loaded when asking questions. README files explain use and installation; they are not additional runtime instructions.
+<details>
+<summary><strong>Installation options and host support</strong></summary>
 
-Use the [evaluation cases and rubric](eval/README.md) to check meaningful behavior after changes. Evaluate in fresh contexts, keep raw outputs, include a control without the skill, and distinguish an unfinished conversation from a completed decision. A response that asks an essential question is not required to invent a final design in the same turn.
+Append `--agent codex` or `--agent claude-code` to choose an agent directly. For a project-only installation, run the command from that project and omit `--global`.
 
-Check frontmatter and relative links as well as behavior. Record the skill and reference hashes with evaluation results. Add a test when a new observed failure justifies it; avoid growing the skill around hypothetical edge cases.
+You can also give your agent the repository URL and ask it to install the skill. For a local checkout or extracted ZIP, use that folder's path in place of `NemuKei/zero-base-thinking`. See the [installation note](skills/zero-base-thinking/INSTALL.md) for manual installation.
 
-The package is independent. It neither assumes another framing workflow is installed nor migrates other skills, personal settings, or memory stores.
+The package follows the [Agent Skills format](https://agentskills.io/specification) and contains five files: the workflow, question guide, Codex metadata, installation note, and license. Its core is Markdown, with no required dependency on another skill, memory service, or background process.
 
-## License and attribution
+Codex metadata enables natural-language discovery with `allow_implicit_invocation: true`. The workflow still requires an explicit zero-base request; routine edits continue as ordinary tasks. For selector-only activation, set `policy.allow_implicit_invocation` to `false` in the installed `agents/openai.yaml`. See the [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills).
 
-MIT; see [LICENSE](LICENSE). This skill was developed as an original instruction set. The copyright notice identifies the author; it does not encode a user's personal configuration or circumstances.
+Question controls depend on the host. Plain-text dialogue is sufficient when no suitable question UI is available. The skill does not control host timers or default selections.
+
+</details>
+
+## Help it get better
+
+This is an experimental skill. The [evaluation record](eval/README.md) contains synthetic cases, raw responses, and the limits of what has been checked. Its usefulness across real conversations is still being explored.
+
+[Issues](https://github.com/NemuKei/zero-base-thinking/issues) and [pull requests](https://github.com/NemuKei/zero-base-thinking/pulls) are welcome. A small, anonymized example is especially useful: what you wanted, what the assistant did, and where the conversation helped or went off course. Include the agent and model when known.
+
+The workflow lives in [SKILL.md](skills/zero-base-thinking/SKILL.md); question design lives in the [question guide](skills/zero-base-thinking/references/questions.md). For behavior changes, start with a concrete case and the [evaluation guide](eval/README.md).
+
+---
+
+[MIT License](LICENSE) · [NemuKei](https://github.com/NemuKei)
